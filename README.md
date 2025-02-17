@@ -451,3 +451,94 @@ for tweet in tweets:
 🔹 Pros: Faster than scraping
 🔹 Cons: Requires Twitter API (paid for full historical access)
 
+Major News Events to Trade for Natural Gas (NG)
+Natural gas (NG) futures are highly reactive to supply and demand shifts, and certain news events cause major volatility. Below are the most important events traders watch for scalping and momentum trades.
+
+1. EIA Weekly Natural Gas Storage Report
+When? Every Thursday at 10:30 a.m. ET (Friday 4:30 a.m. NZST / 5:30 a.m. NZDT)
+Why It Matters?
+Measures natural gas supply levels in underground storage.
+A larger-than-expected build (higher inventory) → Bearish
+A larger-than-expected draw (lower inventory) → Bullish
+How to Trade?
+Scalping opportunities arise within the first 1–5 minutes of the release.
+Larger-than-expected deviation from forecasts leads to significant price swings.
+Use a news service or API to get the data immediately.
+2. NOAA & ECMWF Weather Forecasts
+When?
+Every 6-12 hours, with major updates on Sundays and Thursdays.
+National Oceanic and Atmospheric Administration (NOAA) releases 8–14 day forecasts.
+European Centre for Medium-Range Weather Forecasts (ECMWF) is highly respected in energy trading.
+Why It Matters?
+Colder-than-expected weather in winter → Bullish (higher heating demand).
+Hotter-than-expected weather in summer → Bullish (higher cooling demand via electricity).
+Mild weather → Bearish (low demand).
+How to Trade?
+Price moves when forecasts shift unexpectedly.
+Watch for extreme temperature updates (cold waves in winter, heat waves in summer).
+Some trading firms use AI weather models to front-run gas price movements.
+3. LNG (Liquefied Natural Gas) Export & Import News
+When? Ongoing, but major reports come weekly/monthly.
+Why It Matters?
+U.S. LNG exports to Europe & Asia are a major demand factor.
+Supply disruptions in major LNG terminals (e.g., Freeport LNG, Sabine Pass) can move prices.
+China & Japan import data impact global LNG demand.
+How to Trade?
+News of LNG plant outages → Bearish (supply remains in the U.S.).
+New LNG contracts (China, Europe deals) → Bullish.
+4. Natural Gas Rig Count (Baker Hughes)
+When? Every Friday at 1:00 p.m. ET (Saturday 7:00 a.m. NZST / 8:00 a.m. NZDT)
+Why It Matters?
+The Baker Hughes Natural Gas Rig Count measures active U.S. drilling rigs.
+A declining rig count → Bullish (less future supply).
+A rising rig count → Bearish (more supply).
+How to Trade?
+Not an instant trade catalyst but good for macro trends.
+5. OPEC & Oil Market Reports
+When? OPEC meetings, monthly oil reports.
+Why It Matters?
+Natural gas prices are correlated with oil (especially Brent).
+If OPEC+ cuts oil production, it affects associated natural gas production (as gas is a byproduct of oil drilling).
+High oil prices → More drilling activity → More natural gas supply.
+How to Trade?
+Watch OPEC meetings & decisions on oil supply policy.
+6. Supply Disruptions (Pipelines, Freezing, Hurricanes)
+When? Unscheduled (emergency events).
+Why It Matters?
+Pipeline failures → Bullish (less supply).
+Hurricane disruptions in the Gulf of Mexico → Bullish (reduced production).
+Winter freeze-offs (Texas, Northeast) → Bullish (supply drops as wells freeze).
+How to Trade?
+Monitor weather events, pipeline reports, and Gulf hurricanes.
+Hurricane season (June–November) often impacts natural gas production.
+7. FERC & Government Policy on Energy
+When? Irregular announcements.
+Why It Matters?
+The Federal Energy Regulatory Commission (FERC) controls LNG exports, pipelines.
+New environmental rules can restrict natural gas drilling.
+Biden administration LNG restrictions → Bearish for U.S. exports.
+How to Trade?
+Watch for policy shifts that limit or expand LNG exports.
+8. Earning Reports from Major Gas Companies
+When? Quarterly earnings reports (ExxonMobil, Chevron, Cheniere Energy, etc.).
+Why It Matters?
+Big gas producers provide insights on future drilling plans.
+If production cuts are announced, it’s bullish.
+If producers increase spending, it’s bearish.
+How to Trade?
+Earnings reports set longer-term price direction rather than instant trades.
+9. Economic Reports (CPI, GDP, Interest Rates)
+When? Regular economic calendar events.
+Why It Matters?
+Recession fears → Bearish (lower industrial demand for gas).
+Strong GDP growth → Bullish (higher energy consumption).
+High interest rates increase production costs (impacting supply).
+How to Trade?
+Watch Federal Reserve policy, inflation data, GDP reports.
+Best Events for Scalping Trades
+For fast, 1–5 minute trade reactions, focus on: ✅ EIA Storage Report (Thursday 10:30 a.m. ET)
+✅ Weather Forecast Updates (Sunday, Thursday evenings)
+✅ LNG Supply News & Plant Outages
+✅ Hurricane & Freeze Events
+
+Would you like a real-time news feed API to capture these in seconds? 🚀
