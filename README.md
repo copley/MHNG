@@ -171,3 +171,84 @@ IG Trading & WSJ Market commentary (2024) – noted examples of minimal reaction
 IG.COM
 .
 Note: All price reactions and thresholds are derived from historical market data and academic studies. They serve as general guidelines – actual future reactions may vary with market conditions.
+
+
+Below is a high-level overview of the approximate frequency and probability of different storage surprise “tiers” (minimal, moderate, large) and some guidance on what success rates historically looked like for short-term or “scalp” trades that followed these surprises. Keep in mind that these are broad, ballpark figures based on historical data. Actual probabilities and frequency can vary by season, the broader commodity environment, and how precisely one defines each surprise threshold.
+
+1. Frequency of Surprise Events
+1) Minimal Surprise
+
+Definition: Within ±5 Bcf of consensus (or <5% deviation).
+Occurrence Rate: Historically, this happens roughly 30–40% of the time.
+Rationale: Analyst consensus forecasts are frequently near the actual EIA figure, especially in fairly predictable shoulder-season weeks. Some weeks, the market is surprisingly accurate (e.g., a 2–3 Bcf difference only).
+2) Moderate Surprise
+
+Definition: ±5–15 Bcf difference (or ~5–15% deviation).
+Occurrence Rate: Typically ~40–50% of all weekly reports.
+Rationale: Differences in weather model updates, LNG flows, and production data often cause moderate misalignments between forecasts and the reported number.
+3) Large Surprise
+
+Definition: >±15 or 20 Bcf difference (or >15–20% deviation).
+Occurrence Rate: Historically ~10–20% of the time.
+Rationale: A large surprise typically requires a significant new weather event or a big mismatch in supply/demand assumptions. These are rarer but can happen a handful of times each season, often in winter or times of abrupt supply disruption.
+Because there are ~52 storage reports each year, you might see 5–10 big surprises in a typical year (some years more, some years less), while most are in the moderate range. Minimal surprises might account for 15–20 reports per year, where the market reaction is usually too small to meaningfully trade.
+
+2. Probability of Strategy Success
+When Trading on Large Surprises
+Entry Logic: Suppose you only take trades when the reported figure deviates from consensus by at least ±15 Bcf (or 20% of the forecast).
+Historical Success Rate: Many anecdotal and some academic analyses suggest that the price “follows” the surprise direction at least 70–80% of the time in the immediate aftermath (the first 30 minutes or so).
+Why? Because a big surprise quickly reprices fundamentals. The market usually moves in the expected direction and continues for at least a brief period.
+Scalping Probability: Scalp trades (looking for a quick, small profit) can see success rates in the 60–75% range—some traders report even higher, depending on their entry/exit discipline.
+When Trading on Moderate Surprises
+Entry Logic: Trigger a trade when deviation is ±5–15 Bcf (or 5–15% of forecast).
+Historical Success Rate: The market still tends to move in the direction of the surprise but is more prone to quick reversals, possibly due to other simultaneous factors (e.g., short-term weather).
+Traders might see a 60–65% success rate in capturing an initial move before it stalls or reverses.
+Scalping Probability: Possibly a 50–60% successful scalp outcome, as many moderate surprises are partially priced in or overshadowed by other developments.
+When Trading on Minimal Surprises
+Entry Logic: If the difference is less than 5 Bcf (or 5% deviation), the market reaction is often muted.
+Historical Success Rate: This scenario typically does not have enough momentum to scalp effectively.
+The success rate is often no better than a coin toss (50%) and can be lower once you factor in slippage/spread.
+3. Considerations That Affect These Probabilities
+Market Condition: Bull or bear market regimes can skew responses, e.g., in a strongly bullish environment, even a moderate draw can spark oversized moves.
+Weather News: Surprises coinciding with a major weather change can either amplify or negate the price move.
+Time of Year: Winter has larger average storage changes, so absolute Bcf surprises might be bigger but represent a smaller % deviation. Conversely, in summer, a 10 Bcf difference is more significant proportionally.
+Volatility & Liquidity: Higher implied volatility can lead to bigger intraday swings, improving scalp opportunities. Lower liquidity can mean slippage.
+Backtesting & Real Execution: Live execution slippage and partial fills can lower success rates compared to backtests that assume perfect fills.
+4. Summary
+Large Surprises (~10–20% of reports): Historically produce the highest-probability trade setups with success rates often in the 70%+ range for immediate, direction-following scalps.
+Moderate Surprises (~40–50% of reports): Some tradable reactions, but success rates can drop to 60% or less, due to smaller follow-through and more frequent whipsawing.
+Minimal Surprises (~30–40% of reports): Typically not worth trading, with outcomes akin to random noise.
+Overall, if you systematically code a scalping strategy that only triggers on large surprises and executes quickly, you might expect a 60–80% success rate on those trades, though real-world factors (slippage, news offsets) might lower that probability. Keep in mind these are broad historical tendencies, not guarantees, and your actual results will depend on your specific trade execution details and real-time risk management.
+
+EIA Natural Gas Inventory Report Timing
+Reasoned for 59 seconds
+In a typical week, the EIA publishes its U.S. natural gas storage report every Thursday at 10:30 a.m. Eastern Time (ET). If Thursday falls on a major holiday (e.g., Thanksgiving) or the federal government is closed, the release is usually shifted by one day (to Wednesday or Friday, depending on the holiday schedule).
+
+Here’s the usual schedule:
+
+Regular Weeks:
+
+Thursday, 10:30 a.m. ET
+Holiday Weeks (e.g., Thanksgiving, certain federal holidays):
+
+May shift to Wednesday, 12:00 p.m. ET, or Friday, 10:30 a.m. ET—the EIA will announce schedule changes in advance.
+Traders often position themselves or set automated strategies to react right at 10:30 a.m. ET each Thursday when the number comes out. That’s the critical moment to capitalize on any surprise in the reported inventories.
+
+Since New Zealand operates in New Zealand Standard Time (NZST) or New Zealand Daylight Time (NZDT) (during daylight saving), here’s how the EIA Natural Gas Storage Report time converts:
+
+Regular Schedule (Non-Holiday Weeks)
+USA Release Time: Thursday, 10:30 a.m. ET
+NZST (Standard Time - April to September): Friday, 4:30 a.m. NZST
+NZDT (Daylight Saving - September to April): Friday, 5:30 a.m. NZDT
+Holiday-Shifted Schedule (If Moved to Wednesday or Friday)
+If moved to Wednesday, 12:00 p.m. ET:
+Thursday, 6:00 a.m. NZST (Standard Time)
+Thursday, 7:00 a.m. NZDT (Daylight Time)
+If moved to Friday, 10:30 a.m. ET:
+Saturday, 4:30 a.m. NZST (Standard Time)
+Saturday, 5:30 a.m. NZDT (Daylight Time)
+Key Takeaways
+Most weeks, the report comes out early Friday morning in NZ (4:30 a.m. or 5:30 a.m., depending on the season).
+During daylight saving months (September–April), it's one hour later (5:30 a.m.).
+During standard time months (April–September), it's 4:30 a.m.
+To trade it effectively in New Zealand, you’d need to be awake and ready to execute around 4:20–4:30 a.m. (NZST) or 5:20–5:30 a.m. (NZDT) on Friday mornings.
