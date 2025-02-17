@@ -252,3 +252,202 @@ Most weeks, the report comes out early Friday morning in NZ (4:30 a.m. or 5:30 a
 During daylight saving months (September–April), it's one hour later (5:30 a.m.).
 During standard time months (April–September), it's 4:30 a.m.
 To trade it effectively in New Zealand, you’d need to be awake and ready to execute around 4:20–4:30 a.m. (NZST) or 5:20–5:30 a.m. (NZDT) on Friday mornings.
+
+
+Trading Logic Based on Storage Data & Price Reactions
+Bearish Bias on Positive Surprises (Less Withdrawal than Expected)
+
+If the actual storage withdrawal is less than forecasted (meaning supply is higher than expected), short Natural Gas futures or look for confirmation from technical indicators like:
+Downward momentum in RSI (Relative Strength Index).
+Bearish crossover in MACD (Moving Average Convergence Divergence).
+Price breaking below key support levels.
+Bullish Bias on Negative Surprises (More Withdrawal than Expected)
+
+If the actual storage withdrawal is higher than forecasted (indicating stronger demand or lower supply), go long on Natural Gas futures when:
+RSI shows bullish divergence (oversold conditions bouncing up).
+MACD turns positive or price breaks resistance levels.
+Increased buying volume confirms the move.
+Magnitude of the Surprise Matters
+
+Larger deviations from forecasts (e.g., a difference of 30+ Bcf) result in stronger price reactions.
+Small deviations (e.g., ±5 Bcf) may not significantly move prices unless reinforced by technical signals.
+Practical Trading Plan
+Step 1: Pre-Storage Report Setup
+
+Check upcoming EIA Natural Gas Storage Report release dates.
+Identify key support/resistance levels in the market.
+Look at RSI, MACD, and volume trends to gauge sentiment before the release.
+Step 2: Post-Release Trade Execution
+
+Compare actual vs. forecasted storage change:
+Bullish Scenario: If a significantly larger withdrawal occurs → Look for breakout confirmation to enter long.
+Bearish Scenario: If a smaller withdrawal occurs → Wait for bearish confirmation (like RSI breakdown) before entering short.
+Step 3: Risk Management
+
+Use ATR (Average True Range) to set dynamic stop-losses.
+Adjust position size based on the magnitude of the surprise.
+Exit or scale out if price action fails to follow through on the fundamental expectation.
+Final Takeaway
+Using storage report surprises as a fundamental trigger and combining it with technical confirmation can significantly improve trade accuracy. Would you like me to backtest this approach on historical data to quantify its effectiveness?
+
+How to Get EIA Natural Gas Storage Data from ForexFactory Calendar (Free)
+Step 1: Access the ForexFactory Calendar
+Website: ForexFactory Economic Calendar
+This calendar provides economic reports, including the EIA Natural Gas Storage Report.
+Step 2: Locate the EIA Natural Gas Storage Data
+The EIA Natural Gas Storage Report is listed under "Natural Gas Storage".
+It is typically scheduled for Thursday at 10:30 a.m. ET.
+The calendar shows:
+Previous storage change (Bcf)
+Forecasted change (Bcf)
+Actual storage change (Bcf) when released
+Step 3: Automate Data Retrieval
+There are two ways to extract the data: Manual Checking or Web Scraping.
+
+Option 2: Automate with Python Web Scraping
+If you want to fetch this data automatically, you can use Python with BeautifulSoup to scrape it.
+
+Example Python Script to Extract EIA Data from ForexFactory
+python
+Copy
+import requests
+from bs4 import BeautifulSoup
+
+# ForexFactory Economic Calendar URL
+url = "https://www.forexfactory.com/calendar.php"
+
+# Headers to mimic a real browser request
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.120 Safari/537.36"
+}
+
+# Fetch page content
+response = requests.get(url, headers=headers)
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Find Natural Gas Storage Data
+events = soup.find_all("tr", class_="calendar__row")
+
+for event in events:
+    if "Natural Gas Storage" in event.text:
+        # Extract key data fields
+        time = event.find(class_="calendar__time").text.strip()
+        forecast = event.find_all(class_="calendar__forecast")[0].text.strip()
+        actual = event.find_all(class_="calendar__actual")[0].text.strip()
+        previous = event.find_all(class_="calendar__previous")[0].text.strip()
+
+        print(f"📊 Natural Gas Storage Report")
+        print(f"Time: {time}")
+        print(f"Forecast: {forecast} Bcf")
+        print(f"Actual: {actual} Bcf")
+        print(f"Previous: {previous} Bcf")
+        break  # Stop after finding the first Natural Gas Storage event
+
+
+Option 1: EIA API Code to Retrieve Natural Gas Storage Data
+Here’s a Python script that fetches the latest EIA natural gas storage report using the EIA Open Data API.
+
+API Source:
+Base URL: EIA API
+Dataset ID for Weekly Storage: NGSSTOR
+Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/natural-gas/storage/data/
+Python Code to Retrieve EIA Natural Gas Storage Data
+python
+Copy
+Edit
+import requests
+import json
+
+# Replace 'YOUR_API_KEY' with your actual EIA API key (register at https://www.eia.gov/opendata/register.php)
+EIA_API_KEY = "YOUR_API_KEY"
+API_URL = f"https://api.eia.gov/v2/natural-gas/storage/data/?api_key={EIA_API_KEY}"
+
+# Fetch data
+response = requests.get(API_URL)
+data = response.json()
+
+# Extract latest natural gas storage report data
+if "response" in data and "data" in data["response"]:
+    latest_report = data["response"]["data"][0]  # Most recent report
+
+    report_date = latest_report["period"]
+    previous_storage = latest_report["previous_value"]  # Previous week's storage
+    forecasted_storage = latest_report.get("forecasted_value", "N/A")  # Forecasted (if available)
+    actual_storage = latest_report["value"]  # Actual reported storage change
+
+    # Print report data
+    print(f"📊 EIA Natural Gas Storage Report ({report_date})")
+    print(f"Previous Storage Change: {previous_storage} Bcf")
+    print(f"Forecasted Storage Change: {forecasted_storage} Bcf")
+    print(f"Actual Storage Change: {actual_storage} Bcf")
+else:
+    print("⚠️ Failed to retrieve data. Check API response structure.")
+
+Steps to Use This Code:
+Get an EIA API Key:
+
+Register for free at EIA API Registration.
+Insert your API key into EIA_API_KEY.
+Run the Script:
+
+It fetches the latest natural gas storage report (previous, forecast, actual values).
+The API updates a few minutes after the official 10:30 a.m. ET release.
+Option 2: Twitter Scraping for Faster Data
+Yes, traders often use Twitter (X) bots that publish the EIA natural gas storage report within seconds of release. The most common sources are:
+
+Twitter Accounts to Scrape
+@LiveSquawk – Fastest economic event updates
+@FinancialJuice – Publishes macroeconomic reports quickly
+@EIAgov – Official account (but might be delayed)
+@FastStockAlerts – Posts energy-related data
+@ForexLive – Covers natural gas storage reports
+@zerohedge – Sometimes tweets EIA reports
+Python Code to Scrape Twitter for EIA Natural Gas Storage Data
+Using Tweepy (for API) or Snscrape (for free scraping):
+
+Using snscrape (No API Key Required)
+python
+Copy
+Edit
+import snscrape.modules.twitter as sntwitter
+
+query = "Natural Gas Storage (Bcf) since:2025-01-01"
+tweets = sntwitter.TwitterSearchScraper(query).get_items()
+
+# Extract the most recent tweet
+latest_tweet = next(tweets)
+print(f"🚀 Latest EIA Storage Tweet: {latest_tweet.date}")
+print(f"Tweet Text: {latest_tweet.content}")
+🔹 Pros: No API key needed
+🔹 Cons: Slight delay (scraping speed varies)
+
+Using Twitter API (Requires Twitter API Key)
+python
+Copy
+Edit
+import tweepy
+
+# Replace with your API credentials
+API_KEY = "YOUR_TWITTER_API_KEY"
+API_SECRET = "YOUR_TWITTER_API_SECRET"
+ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"
+ACCESS_SECRET = "YOUR_ACCESS_SECRET"
+
+# Authenticate
+auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
+api = tweepy.API(auth)
+
+# Search for latest EIA Natural Gas Storage tweets
+tweets = api.search_tweets(q="Natural Gas Storage", lang="en", count=5)
+
+# Print latest tweets
+for tweet in tweets:
+    print(f"📢 {tweet.created_at} - {tweet.user.screen_name}: {tweet.text}\n")
+🔹 Pros: Faster than scraping
+🔹 Cons: Requires Twitter API (paid for full historical access)
+
