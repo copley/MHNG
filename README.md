@@ -541,4 +541,56 @@ For fast, 1–5 minute trade reactions, focus on: ✅ EIA Storage Report (Thursd
 ✅ LNG Supply News & Plant Outages
 ✅ Hurricane & Freeze Events
 
-Would you like a real-time news feed API to capture these in seconds? 🚀
+Summary of the Energy Commodities Market Recap (Hosted by Bill Shanahan & Brian Pier)
+Hosts & Background
+Bill Shanahan and Brian Pier, with over 55 years of combined experience in the energy sector, provide a weekly analysis of energy commodities on EnergyRogue.com. They discuss market trends, trading strategies, and the latest insights into supply and demand dynamics.
+
+Key Takeaways from the Discussion:
+1. Natural Gas Market Overview
+Past Trends (2023 & 2024):
+
+Weak winter demand in previous years contributed to surplus storage.
+A production surge in 2021-2023 led to expectations of oversupply.
+However, 2024 saw flat production growth and increased demand, causing a tighter market.
+Current Market Conditions (2024-2025 Outlook):
+
+Natural gas storage has shrunk by 1 trillion cubic feet (TCF) compared to last year.
+LNG (Liquefied Natural Gas) exports increased from 11 BCF/day in 2022 to 16 BCF/day in 2024, with further growth expected.
+Power sector demand for natural gas is rising, driven by AI, data centers, and increased electricity consumption.
+Production remains flat or could decline in 2025, while demand for LNG and electricity continues to grow.
+Storage levels are expected to be 300 BCF below the 5-year average by March 2025.
+2. Supply vs. Demand & Price Implications
+Basic Economics Applied to Natural Gas:
+
+If supply increases while demand stays the same, prices drop.
+If demand increases while supply stays the same, prices rise.
+Given flat production and rising demand, natural gas prices are likely to increase and stay higher for longer in 2025.
+Growing Natural Gas Demand Factors:
+
+Electricity consumption is increasing, with more power being generated from natural gas.
+LNG exports are surging, adding pressure to domestic supply.
+Industrial and commercial demand for natural gas is also on the rise.
+Risk Factors:
+
+A colder-than-expected winter in late 2024 could further tighten supply.
+Any production disruptions or regulatory changes could cause further volatility.
+3. Trading & Market Strategy
+Key Strategies for Traders & Investors:
+Understand supply-demand imbalances to predict price movements.
+Monitor LNG export trends and power sector demand as primary market drivers.
+Watch for price movements above $4.39 per MMBtu for bullish momentum.
+Be aware of the impact of seasonal weather trends on market shifts.
+4. Energy Rogue Services
+Rogue Radar ($89/month)
+
+Provides a daily market update, Red Light/Green Light indicators, and market insights in a 4-minute read.
+Rogue Edge ($179/month)
+
+Offers interactive data analysis, AI-powered trading insights, and access to a trader community.
+5. Looking Ahead
+The next episode will focus on nuclear energy and its potential impact on energy markets.
+Investors, traders, and businesses should stay informed and avoid reacting only to media headlines.
+Conclusion:
+The natural gas market is undergoing a significant shift with higher demand, flat supply, and reduced storage levels.
+Prices are expected to rise as the market tightens.
+Staying ahead of market trends and utilizing data-driven insights is crucial for making informed investment and trading decisions.
