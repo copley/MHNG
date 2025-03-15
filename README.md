@@ -785,3 +785,109 @@ Natural Gas Pipeline Flow Data (Daily)
 Industrial and Power Sector Demand Reports (Monthly & Seasonal)
 OPEC+ and Crude Oil Reports (Monthly)
 U.S. GDP & Economic Reports (Monthly/Quarterly)
+
+
+Below is a step-by-step logical framework (no code) for a high-probability natural gas scalp strategy using the EIA and NOAA data you can retrieve in near real-time. This approach focuses on quick, short-term trades keyed to fundamental surprises and rapid market reactions.
+
+1. Identify the Key Catalysts & Timing
+Since you have near real-time API access to EIA reports and NOAA forecasts, the core catalysts to scalp around are:
+
+EIA Natural Gas Storage Report (Weekly, Thursdays ~10:30 a.m. ET)
+NOAA Weather Forecast Updates (Multiple times per day; major changes often released Sunday evenings & Thursdays)
+EIA LNG Export Data (Weekly & Monthly)
+EIA Natural Gas Weekly Update (Every Thursday, before the storage report)
+EIA Drilling Productivity Report (DPR) (Monthly, 2nd Monday)
+EIA Short-Term Energy Outlook (STEO) (Monthly, 2nd Tuesday)
+While all these reports can move the market, the EIA Natural Gas Storage Report and major NOAA forecast shifts tend to cause the most immediate and tradeable intraday volatility suitable for scalping.
+
+2. Set Up the “Surprise” Thresholds
+Define what constitutes a significant or “tradable” surprise for each release. For instance:
+
+EIA Natural Gas Storage Report
+Compare: Actual vs. consensus estimate (which you can source from news feeds or aggregator consensus).
+Surprise Threshold:
+Moderate Surprise: ±10 Bcf from consensus (or ±10% deviation).
+Large Surprise: ±15–20 Bcf from consensus (or ±15–20% deviation).
+Trade Bias:
+Bullish if actual < consensus (tighter supply).
+Bearish if actual > consensus (looser supply).
+NOAA Weather Forecasts
+Focus on changes to extreme temperatures (either extreme cold or extreme heat).
+Surprise Threshold: A significant shift in 8–14 day outlook (e.g., from mild to very cold or from average to extreme heat).
+Trade Bias:
+Bullish if new forecast indicates significantly colder-than-expected winter or hotter-than-expected summer.
+Bearish if the forecast suddenly turns mild when the market expected extremes.
+Other EIA Releases (DPR, LNG Exports, STEO)
+These typically don’t produce the same rapid scalping spikes as the storage report but can reinforce or counter your bias.
+Example: If LNG export data surges unexpectedly, it can amplify a bullish storage surprise.
+3. Pre-Release Preparation
+Mark Release Times:
+EIA Storage: Thursdays, 10:30 a.m. ET
+NOAA: Significant updates often come out Sunday evenings, Thursday midday, or after new model runs.
+Gather Consensus/Forecast:
+Know the “market expectation” for the storage number (or the prior NOAA forecast).
+This sets the baseline to judge how big the surprise is.
+Set Up “Quick Reaction” Infrastructure:
+Since you’re scalping, you need rapid data ingestion (through your API feed) and the ability to place trades quickly (through TWS or ibapi).
+Have a watchlist of front-month natural gas futures (e.g., NG contract) with tight quotes.
+4. Immediate Post-Release Scalp Logic
+When a report hits (e.g., EIA Storage at 10:30 a.m. ET on Thursday):
+
+Check the Data vs. Expectation
+
+For storage: Actual – Consensus = Surprise.
+If the absolute difference is below your threshold (say ±10 Bcf), no trade (noise).
+If above threshold, initiate trade in the direction of the fundamental bias.
+Enter Quickly
+
+If it’s a bullish surprise (actual well below consensus): go long.
+If it’s a bearish surprise (actual well above consensus): go short.
+Use market or stop orders for fast fill (limit orders can miss the initial spike).
+Use a Tight Stop-Loss
+
+Volatility is highest right after release.
+Place your stop just beyond a key intraday support/resistance (e.g., 5–10 ticks away in the NG futures, depending on volatility).
+This ensures you keep losses small if the market whipsaws.
+Monitor for Follow-Through
+
+If the market continues moving in your favor in the first 1–5 minutes, stay in.
+If momentum stalls or reverses quickly, exit. Scalp trades rely on immediate follow-through.
+Exit Targets
+
+You can set a fixed reward-to-risk, e.g., 1.5:1 or 2:1.
+Alternatively, watch the first surge (1–2 minutes). If price leaps 10–15 ticks and stalls, take profit.
+Most of the fundamental re-pricing occurs in the first 30 minutes after release. Don’t linger too long.
+5. Combining NOAA Weather Shocks
+When NOAA model updates indicate a major shift (e.g., from mild to extremely cold):
+
+Compare Current Forecast vs. Previous
+If the shift is big (like an unanticipated cold wave), expect a bullish gap in NG.
+Wait for the Market Open (if overnight)
+Natural gas futures might gap up or down. If you see a strong overnight move, look for a short-term pullback on market open, then a scalp entry in the direction of the fundamental shift.
+Set Profit Targets & Stops
+Same approach: tight stop, quick exit, because weather-driven spikes can retrace if the next forecast update contradicts the initial change.
+6. Filter & Confirmation from Other EIA Releases
+LNG Export Data: If the same week’s LNG export numbers are significantly higher than usual and you get a bullish storage surprise, that’s double confirmation to take a stronger scalp long.
+DPR & STEO: Usually slower burn data, but if a new monthly DPR shows a big drop in expected production, it can reinforce any bullish short-term pivot on the storage report.
+7. Risk Management & Frequency
+Expect 1–2 major scalping trades per week (usually around the Thursday EIA Storage number or a big NOAA update).
+Never trade small surprises that don’t exceed your threshold (avoid noise).
+Position Sizing: Keep it small enough to handle high volatility.
+Daily Max Loss: If you get whipsawed once or twice, call it quits for the day.
+8. Example Flow (Storage Report)
+9:00 a.m. ET: You confirm consensus is +60 Bcf build.
+10:30 a.m. ET: EIA reports a +45 Bcf build → Bullish surprise (15 Bcf less than expected).
+Scalp Entry: Immediately go long front-month NG.
+Stop-Loss: 5–10 ticks below pre-report swing low.
+Profit Target: Could be 2:1 reward-to-risk or a quick +10–15 tick gain if volatility is high.
+Exit: If price surges in the first minute, lock in partial profits. Trail a stop for the remainder.
+If the difference had been +63 Bcf vs. +60 Bcf expected (3 Bcf difference), that’s below your ±10 Bcf threshold → No trade.
+
+9. Key Points to Remember
+Act Fast: The biggest moves often occur in the first 1–5 minutes after the data release.
+Stick to Thresholds: Only trade “true” surprises. This filters out noise.
+Risk Control: High volatility demands tight stops and quick profit-taking.
+Fundamental + Technical: Fundamentals trigger the scalp; simple intraday charts (support/resistance) can guide entry/exit specifics.
+Don’t Overstay: These trades aim for short, intraday gains, not multi-day swings.
+Final Thoughts
+This scalping logic uses near-instant fundamentals (EIA + NOAA) to catch the initial volatility burst. The key is selectivity (only trade big surprises) and discipline (tight stops, fast exits). Over time, consistent application of these rules can yield high-probability setups in the highly reactive natural gas market.
