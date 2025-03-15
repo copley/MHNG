@@ -594,3 +594,194 @@ Conclusion:
 The natural gas market is undergoing a significant shift with higher demand, flat supply, and reduced storage levels.
 Prices are expected to rise as the market tightens.
 Staying ahead of market trends and utilizing data-driven insights is crucial for making informed investment and trading decisions.
+
+
+ChatGPT said:
+Here's a breakdown of whether each report is free or paid:
+
+✅ Free Reports (Publicly Available)
+EIA Natural Gas Storage Report (Weekly) – ✅ Free
+
+Available on the EIA website (link)
+Published every Thursday at 10:30 AM ET
+EIA Short-Term Energy Outlook (STEO) (Monthly) – ✅ Free
+
+Available on the EIA website (link)
+Released 2nd Tuesday of each month
+EIA Drilling Productivity Report (DPR) (Monthly) – ✅ Free
+
+Available on the EIA website (link)
+Released 2nd Monday of each month
+EIA Natural Gas Weekly Update (Weekly) – ✅ Free
+
+Available on the EIA website (link)
+Published every Thursday
+Baker Hughes Natural Gas Rig Count (Weekly) – ✅ Free
+
+Available on the Baker Hughes website (link)
+Released every Friday at 1:00 PM ET
+NOAA 8-14 Day Weather Forecast (Updated every 6-12 hours) – ✅ Free
+
+Available on the NOAA website (link)
+EIA LNG Export Data (Weekly & Monthly) – ✅ Free
+
+Available on the EIA website (link)
+U.S. GDP & Economic Reports (Monthly/Quarterly) – ✅ Free
+
+Available on the Bureau of Economic Analysis (BEA) and Federal Reserve websites
+GDP report (BEA link)
+Fed data (FRED link)
+💲 Paid or Partially Free Reports
+ECMWF Weather Forecast (Updated every 6-12 hours) – 💲 Paid (some free access)
+
+Limited free access on ECMWF website
+Full model data requires a subscription or broker access
+Natural Gas Pipeline Flow Data (Daily) – 💲 Paid
+
+Available via Genscape/Wood Mackenzie (link)
+Requires a subscription
+Industrial and Power Sector Demand Reports (Monthly & Seasonal) – 💲 Paid (some free summaries)
+Some free reports on EIA electricity website
+Detailed demand analysis often requires a subscription (e.g., Wood Mackenzie, IHS Markit)
+OPEC+ and Crude Oil Reports (Monthly) – 💲 Paid (some free summaries)
+Summary reports are free on the OPEC website
+Full reports & detailed forecasts require membership or purchase
+Summary: Free vs. Paid Reports
+✅ Fully Free Reports
+
+EIA Natural Gas Storage Report
+EIA STEO (Short-Term Energy Outlook)
+EIA Drilling Productivity Report
+EIA Natural Gas Weekly Update
+Baker Hughes Rig Count
+NOAA Weather Forecasts
+EIA LNG Export Data
+U.S. GDP & Economic Reports
+💲 Paid or Partially Free Reports
+
+ECMWF Weather Forecasts (full access requires subscription)
+Natural Gas Pipeline Flow Data (Genscape/Wood Mackenzie subscription)
+Industrial and Power Demand Reports (free summaries, detailed data paid)
+OPEC+ and Crude Oil Reports (free summaries, full reports paid)
+
+
+APIs Needed for Real-Time or Near-Real-Time Access to These Reports
+1. EIA Natural Gas Storage Report
+API: EIA API
+Base URL: https://api.eia.gov/
+Dataset ID: NGSSTOR (for Weekly Natural Gas Storage)
+API Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/natural-gas/storage/data/
+Access: Requires free API key (register here)
+2. EIA Short-Term Energy Outlook (STEO)
+API: EIA API
+Base URL: https://api.eia.gov/
+Dataset ID: STEO (Short-Term Energy Outlook)
+API Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/steo/data/
+Access: Requires free API key
+3. EIA Drilling Productivity Report (DPR)
+API: EIA API
+Base URL: https://api.eia.gov/
+Dataset ID: NGDPR (Drilling Productivity Report)
+API Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/natural-gas/drilling/data/
+Access: Requires free API key
+4. EIA Natural Gas Weekly Update
+API: EIA API
+Base URL: https://api.eia.gov/
+Dataset ID: NGWEEKLY
+API Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/natural-gas/weekly/data/
+Access: Requires free API key
+5. EIA LNG Export Data
+API: EIA API
+Base URL: https://api.eia.gov/
+Dataset ID: NGLNG (Liquefied Natural Gas Exports)
+API Endpoint:
+bash
+Copy
+Edit
+https://api.eia.gov/v2/natural-gas/lng/data/
+Access: Requires free API key
+6. NOAA Weather Forecasts
+API: NOAA API
+Base URL: https://www.ncdc.noaa.gov/cdo-web/webservices
+API Endpoint (for forecasts):
+bash
+Copy
+Edit
+https://api.weather.gov/gridpoints/{office}/{gridX},{gridY}/forecast
+Access: Requires free NOAA API key (register here)
+Summary: Required APIs
+Report	API Needed	API Documentation
+EIA Natural Gas Storage Report	EIA API	EIA API Docs
+EIA STEO (Short-Term Energy Outlook)	EIA API	EIA API Docs
+EIA Drilling Productivity Report (DPR)	EIA API	EIA API Docs
+EIA Natural Gas Weekly Update	EIA API	EIA API Docs
+EIA LNG Export Data	EIA API	EIA API Docs
+NOAA Weather Forecasts	NOAA API	NOAA API Docs
+
+
+✅ Available via API (Real-Time or Near-Real-Time)
+EIA Natural Gas Storage Report – ✅ Yes
+
+Available via EIA API (link)
+Typically updated within minutes of release
+EIA STEO (Short-Term Energy Outlook) – ✅ Yes
+
+Available via EIA API
+Monthly data, not as time-sensitive, but can be accessed immediately upon release
+EIA Drilling Productivity Report (DPR) – ✅ Yes
+
+Available via EIA API
+Updated monthly; real-time retrieval possible
+EIA Natural Gas Weekly Update – ✅ Yes
+
+Available via EIA API
+Weekly update accessible shortly after publication
+EIA LNG Export Data – ✅ Yes
+
+Available via EIA API
+Updated weekly and monthly, accessible immediately upon release
+NOAA Weather Forecasts – ✅ Yes
+
+Available via NOAA API (link)
+Updated multiple times daily, near real-time access possible
+❌ Not Available via API (Delayed or No API)
+Baker Hughes Rig Count – ❌ No API, Delayed Release
+
+Available only via the Baker Hughes website (link)
+No real-time API; typically updated manually after 1 PM ET on Fridays
+U.S. GDP & Economic Reports – ❌ No Real-Time API, Delayed
+
+Published by BEA (Bureau of Economic Analysis) (link)
+Available via FRED API, but updates are not immediate; usually delayed by minutes or hours
+Final Summary
+✅ Real-time or near-instant API access: EIA reports, NOAA weather data
+❌ No real-time API: Baker Hughes Rig Count, U.S. GDP reports (some delay)
+
+Key Reports Influencing NYMEX Henry Hub Natural Gas (MHNG) Prices
+EIA Natural Gas Storage Report (Weekly)
+EIA Short-Term Energy Outlook (STEO) (Monthly)
+EIA Drilling Productivity Report (DPR) (Monthly)
+EIA Natural Gas Weekly Update (Weekly)
+Baker Hughes Natural Gas Rig Count (Weekly)
+NOAA & ECMWF Weather Forecasts (Updated every 6-12 hours)
+LNG Export Data (Weekly & Monthly)
+Natural Gas Pipeline Flow Data (Daily)
+Industrial and Power Sector Demand Reports (Monthly & Seasonal)
+OPEC+ and Crude Oil Reports (Monthly)
+U.S. GDP & Economic Reports (Monthly/Quarterly)
