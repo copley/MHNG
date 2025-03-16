@@ -1010,3 +1010,57 @@ Check NOAA forecast changes around 6:00–9:00 p.m. ET for potential Monday gap 
 Thursday Midday (Additional NOAA Updates):
 If the Thursday model run shows a radical forecast change, prepare for a second wave of volatility after the storage-driven move.
 These time windows provide the best overlap between major fundamentals (storage + weather) and immediate, scalping-friendly price action in natural gas futures.
+
+
+Below are approximate NZT conversions for each key monitoring window in the strategy. Because New Zealand (NZ) and U.S. Eastern Time (ET) both switch between standard time and daylight saving, the exact offset can vary from 16 to 18 hours. The table below shows the most common scenarios so you can adjust according to the current date.
+
+1. Thursday (Storage Day)
+U.S. Event: Be at your screen by 10:20 a.m. ET on Thursday; the EIA Storage Report hits at 10:30 a.m. ET.
+
+U.S. Eastern & NZ Time Status	Time Difference	10:20 a.m. ET (Thu) in NZ	10:30 a.m. ET (Thu) in NZ
+ET in Daylight (UTC-4)
+NZ in Standard (UTC+12)	16 hours	2:20 a.m. (Fri)	2:30 a.m. (Fri)
+ET in Standard (UTC-5)
+NZ in Daylight (UTC+13)	18 hours	4:20 a.m. (Fri)	4:30 a.m. (Fri)
+Both in Standard
+(ET UTC-5, NZ UTC+12)	17 hours	3:20 a.m. (Fri)	3:30 a.m. (Fri)
+Both in Daylight
+(ET UTC-4, NZ UTC+13)	17 hours	3:20 a.m. (Fri)	3:30 a.m. (Fri)
+Practical Shortcut:
+
+Most often you’ll see EIA released at 4:30 a.m. NZDT on Friday (when the U.S. is in standard time and NZ in daylight).
+Or 2:30 a.m. NZST on Friday (when the U.S. is in daylight and NZ in standard).
+2. Sunday Evening (Weather Shift)
+U.S. Event: Check NOAA forecast changes 6:00–9:00 p.m. ET on Sunday for possible Monday gap setups.
+
+U.S. Eastern & NZ Time Status	Time Difference	6:00 p.m. ET (Sun) in NZ	9:00 p.m. ET (Sun) in NZ
+ET in Daylight (UTC-4)
+NZ in Standard (UTC+12)	16 hours	10:00 a.m. (Mon)	1:00 p.m. (Mon)
+ET in Standard (UTC-5)
+NZ in Daylight (UTC+13)	18 hours	12:00 p.m. (Mon)	3:00 p.m. (Mon)
+Both in Standard (17-hour diff)	17 hours	11:00 a.m. (Mon)	2:00 p.m. (Mon)
+Both in Daylight (17-hour diff)	17 hours	11:00 a.m. (Mon)	2:00 p.m. (Mon)
+Practical Shortcut:
+
+Often ends up late Monday morning to early Monday afternoon NZ.
+3. Thursday Midday (Additional NOAA Updates)
+U.S. Event: “Midday Thursday” in ET is roughly 12:00 p.m.–2:00 p.m. ET.
+
+U.S. Eastern & NZ Time Status	Time Difference	12:00 p.m. ET (Thu) in NZ	2:00 p.m. ET (Thu) in NZ
+ET in Daylight (UTC-4)
+NZ in Standard (UTC+12)	16 hours	4:00 a.m. (Fri)	6:00 a.m. (Fri)
+ET in Standard (UTC-5)
+NZ in Daylight (UTC+13)	18 hours	6:00 a.m. (Fri)	8:00 a.m. (Fri)
+Both in Standard (17-hour diff)	17 hours	5:00 a.m. (Fri)	7:00 a.m. (Fri)
+Both in Daylight (17-hour diff)	17 hours	5:00 a.m. (Fri)	7:00 a.m. (Fri)
+Practical Shortcut:
+
+Typically corresponds to very early Friday morning NZ (4:00–8:00 a.m.).
+How to Use This Time Conversion
+Check Current Time Zones: See if the U.S. is on Eastern Standard Time (UTC-5) or Eastern Daylight Time (UTC-4), and whether NZ is on NZ Standard Time (UTC+12) or NZ Daylight Time (UTC+13).
+Apply the Correct Hour Offset (16–18 hours) to pinpoint your local NZ time.
+Plan Your Trading Routine:
+EIA Storage (Thursday 10:30 a.m. ET) → Friday early morning NZ.
+Sunday 6–9 p.m. ET → Monday late morning/early afternoon NZ.
+Thursday midday ET → Friday pre-market hours NZ.
+By aligning with these local NZ times, you can be in front of your screens just before each key event, ready to scalp if a significant surprise materializes.
