@@ -216,3 +216,200 @@ Run the script, and it will:
 Fetch real-time market prices.
 Automatically enter options trades when prices hit key levels.
 Place market orders to ensure execution.
+
+Types of Options Orders in TWS (IBAPI) for Oil (MCL) & Natural Gas (MHNG)
+In the IBAPI code I shared earlier, the options orders are single-leg buy orders for calls (bullish) or puts (bearish) when price hits support or resistance.
+
+However, to make this more effective and profitable, we should use multi-leg options strategies such as spreads, straddles, or iron condors.
+
+1. Types of Options Strategies for Trading Oil & Gas with IBAPI
+Below are different options strategies that can be programmed into IBAPI for trading MCL and MHNG:
+
+A. Directional Strategies (Higher Risk-Reward)
+🔹 Buying Call Options (Bullish at Support)
+
+Buy ATM or ITM Call when price reaches support.
+Profit if price moves up before expiration.
+Example: Buy $3.00 MHNG Call Option if Natural Gas price is at support.
+🔹 Buying Put Options (Bearish at Resistance)
+
+Buy ATM or ITM Put when price reaches resistance.
+Profit if price drops before expiration.
+Example: Buy $70.68 MCL Put Option if Crude Oil price is at resistance.
+✔ Pros: High reward if move happens quickly.
+❌ Cons: Time decay risk (theta decay).
+
+B. Credit Spreads (Lower Risk, Higher Probability)
+🔹 Bull Put Spread (Bullish at Support, Sell Puts)
+
+Sell ATM or OTM put at support.
+Buy lower-strike put as protection.
+Example:
+Sell $3.00 MHNG Put
+Buy $2.90 MHNG Put
+Profit if price stays above support at expiration.
+🔹 Bear Call Spread (Bearish at Resistance, Sell Calls)
+
+Sell ATM or OTM call at resistance.
+Buy higher-strike call as protection.
+Example:
+Sell $70.68 MCL Call
+Buy $72.00 MCL Call
+Profit if price stays below resistance at expiration.
+✔ Pros: High win rate (~75-85%), collects premium.
+❌ Cons: Limited profit potential.
+
+C. Non-Directional Strategies (Neutral Trades)
+🔹 Straddle (Volatility Play)
+
+Buy ATM Call & ATM Put simultaneously.
+Profit if price moves big in either direction.
+Example:
+Buy $70.00 MCL Call
+Buy $70.00 MCL Put
+🔹 Iron Condor (Range-Bound Play)
+
+Sell out-of-the-money call & put and buy further OTM options as protection.
+Example:
+Sell $70.00 Call + Buy $72.00 Call
+Sell $3.00 Put + Buy $2.90 Put
+Profit if price stays in the range.
+✔ Pros: Profits from low volatility.
+❌ Cons: Needs price to stay in a tight range.
+
+2. How to Place These Options Orders in IBAPI
+The IBAPI order types for options depend on the strategy being used.
+
+A. Buying a Call or Put (Simple Order)
+python
+Copy
+Edit
+def create_option_order(action, quantity, strike, expiry, contract_symbol):
+    order = Order()
+    order.action = action  # "BUY" or "SELL"
+    order.orderType = "MKT"  # Market order
+    order.totalQuantity = quantity
+
+    option_contract = Contract()
+    option_contract.symbol = contract_symbol
+    option_contract.secType = "OPT"
+    option_contract.exchange = "SMART"
+    option_contract.currency = "USD"
+    option_contract.right = "C" if action == "BUY" else "P"  # "C" for calls, "P" for puts
+    option_contract.strike = strike
+    option_contract.lastTradeDateOrContractMonth = expiry
+    option_contract.multiplier = "100"  # Options contract multiplier
+    return option_contract, order
+Example: Buying an MCL Call at $70 strike
+
+python
+Copy
+Edit
+contract, order = create_option_order("BUY", 1, 70, "202406", "CL")
+app.placeOrder(app.nextOrderId(), contract, order)
+B. Bull Put Spread (Credit Spread)
+For spreads, IBAPI uses combo orders.
+
+python
+Copy
+Edit
+def create_bull_put_spread():
+    contract = Contract()
+    contract.symbol = "CL"
+    contract.secType = "BAG"  # Combo order for spreads
+    contract.exchange = "SMART"
+    contract.currency = "USD"
+
+    # Define the short put (sell)
+    short_put = Contract()
+    short_put.symbol = "CL"
+    short_put.secType = "OPT"
+    short_put.exchange = "SMART"
+    short_put.currency = "USD"
+    short_put.strike = 70.0  # Sell $70 Put
+    short_put.right = "P"
+    short_put.lastTradeDateOrContractMonth = "202406"
+
+    # Define the long put (buy)
+    long_put = Contract()
+    long_put.symbol = "CL"
+    long_put.secType = "OPT"
+    long_put.exchange = "SMART"
+    long_put.currency = "USD"
+    long_put.strike = 68.0  # Buy $68 Put
+    long_put.right = "P"
+    long_put.lastTradeDateOrContractMonth = "202406"
+
+    contract.comboLegs = []
+    contract.comboLegs.append(short_put)
+    contract.comboLegs.append(long_put)
+
+    # Create spread order
+    order = Order()
+    order.action = "BUY"
+    order.orderType = "MKT"  # Market order
+    order.totalQuantity = 1
+    return contract, order
+Example: Placing a Bull Put Spread on MCL
+
+python
+Copy
+Edit
+contract, order = create_bull_put_spread()
+app.placeOrder(app.nextOrderId(), contract, order)
+C. Straddle (Volatility Play)
+python
+Copy
+Edit
+def create_straddle():
+    contract = Contract()
+    contract.symbol = "CL"
+    contract.secType = "BAG"
+    contract.exchange = "SMART"
+    contract.currency = "USD"
+
+    call_leg = Contract()
+    call_leg.symbol = "CL"
+    call_leg.secType = "OPT"
+    call_leg.exchange = "SMART"
+    call_leg.currency = "USD"
+    call_leg.strike = 70.0
+    call_leg.right = "C"
+    call_leg.lastTradeDateOrContractMonth = "202406"
+
+    put_leg = Contract()
+    put_leg.symbol = "CL"
+    put_leg.secType = "OPT"
+    put_leg.exchange = "SMART"
+    put_leg.currency = "USD"
+    put_leg.strike = 70.0
+    put_leg.right = "P"
+    put_leg.lastTradeDateOrContractMonth = "202406"
+
+    contract.comboLegs = []
+    contract.comboLegs.append(call_leg)
+    contract.comboLegs.append(put_leg)
+
+    order = Order()
+    order.action = "BUY"
+    order.orderType = "MKT"
+    order.totalQuantity = 1
+    return contract, order
+Example: Placing a Straddle on MCL
+
+python
+Copy
+Edit
+contract, order = create_straddle()
+app.placeOrder(app.nextOrderId(), contract, order)
+3. Which Options Strategy Should You Use?
+Strategy	When to Use?	Win Rate	Risk Level	Best for Futures Traders?
+Buying Calls/Puts	When expecting strong breakout	60-75%	🔴 High	✅ Good
+Credit Spreads	When expecting slow move or no move	75-85%	🟢 Low	✅ Best Choice
+Straddles	When expecting big move in either direction	50-60%	🔴 High	❌ Not ideal
+Iron Condors	When expecting no movement	80-90%	🟢 Very Low	❌ Not ideal
+✔ Best for Automated IBAPI Trading?
+✅ Credit Spreads (Bull Put / Bear Call) → Best for Stability
+✅ Buying Calls/Puts at Reversals → Good for High Reward Trades
+
+
