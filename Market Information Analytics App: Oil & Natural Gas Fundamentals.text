@@ -1,0 +1,96 @@
+### Market Information Analytics App: Oil & Natural Gas Fundamentals
+
+#### Overview
+This analytics application integrates fundamental data from free APIs (EIA, IEA/OECD, JODI, OPEC, GIE, World Bank) to generate clear trend directions and actionable insights for Oil and Natural Gas markets. It focuses exclusively on fundamental analysis, omitting market pricing or technical indicators.
+
+#### Features
+- **Automated API Integration:** Pulls weekly and monthly fundamental data automatically.
+- **Trend Analysis:** Uses fundamental data to identify storage, production, consumption, import/export trends.
+- **Customized Prompts:** Implements detailed analysis templates to generate consistent, professional-grade insights.
+
+---
+
+### Integrated APIs:
+- **EIA API:** Weekly/monthly storage, production, imports/exports, refinery data (real-time and historical).
+- **IEA/OECD:** Monthly OECD-focused oil and gas data.
+- **OPEC Reports:** Monthly Oil Market Reports, annual statistics.
+- **JODI:** Global oil/gas production, demand, imports/exports, stocks (monthly).
+- **GIE (AGSI+/ALSI):** Daily European gas storage/LNG send-out.
+- **World Bank:** Long-term historical macroeconomic energy data.
+
+---
+
+### App Workflow:
+1. **Data Acquisition:**
+   - Automatically query APIs weekly/monthly.
+   - Store structured historical data for analysis.
+
+2. **Trend Calculation:**
+   - Identify storage surplus/deficit relative to historical averages.
+   - Detect weekly/monthly production and consumption trends.
+
+3. **Analytics & Reporting (Based on provided prompts):**
+   - **Weekly Storage Insight:** Analyze week-over-week storage data and five-year averages.
+   - **Seasonal Strategy:** Evaluate medium-term storage and seasonal trends.
+   - **Supply/Demand Analysis:** Detailed sector-wise consumption, production, and trade balance.
+   - **Price Impact Evaluation:** Short-term production and inventory shifts affecting price outlook.
+   - **Cross-Commodity Analysis:** Analyze dynamics between Natural Gas, Crude Oil, and Coal.
+   - **Comprehensive Monthly Overview:** Institutional-quality report on monthly trends and strategic outlook.
+   - **Advanced Visualization:** Trend charts with Matplotlib/Plotly for insightful visualization.
+   - **Economic Indicator Analysis:** Long-term market implications based on GDP, employment, policy trends.
+   - **Morning Trading Update:** Quick pre-market actionable insights.
+   - **Risk & Scenario Planning:** Identify risks and provide hedging/scenario-based strategies.
+
+---
+
+### Technology Stack:
+- **Backend:** Python (Flask/FastAPI)
+- **Frontend:** Streamlit or Dash for interactive visualizations.
+- **Database:** SQLite/PostgreSQL for historical data storage.
+- **Visualization:** Matplotlib/Plotly
+- **Cloud Deployment:** Heroku or AWS (optional)
+
+---
+
+### Example Analytics Implementation:
+
+#### Sample Weekly Natural Gas Inventory Insight
+- Fetch weekly EIA data.
+- Calculate deviation from the 5-year average.
+- Provide narrative analysis on surplus/deficit.
+- Generate recommendations for short-term trading strategy.
+
+#### Sample Code Snippet (Simplified):
+```python
+def analyze_weekly_storage(current, previous, avg_5yr):
+    weekly_change = current - previous
+    deviation = current - avg_5yr
+
+    if deviation < 0:
+        direction = "Deficit"
+        implication = "Bullish potential on reduced supply."
+    else:
+        direction = "Surplus"
+        implication = "Bearish potential due to oversupply."
+
+    return {
+        "weekly_change": weekly_change,
+        "deviation_from_avg": deviation,
+        "direction": direction,
+        "implication": implication
+    }
+```
+
+#### Visualization:
+- Plot weekly storage vs. historical averages using Plotly to clearly illustrate trends and potential market moves.
+
+---
+
+### Deliverables:
+- Fully integrated analytics platform.
+- Automated report generation based on predefined prompts.
+- Visualizations embedded within strategic insights.
+- Documentation for API integration and analytics workflows.
+
+This approach ensures a comprehensive, structured, and actionable fundamental analysis tool tailored for traders and institutional analysts.
+
