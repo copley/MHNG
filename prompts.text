@@ -1,0 +1,153 @@
+GPT-4.5-Prompt for Trading Analysis Based on Rogue Radar + IBAPI Data
+📌 Prompt Template:
+
+markdown
+Copy
+Edit
+You are a professional quantitative trader specializing in energy markets, particularly Natural Gas (NG) and Crude Oil (CL/Brent). Your task is to analyze the latest market conditions based on the provided **Rogue Radar Report** and **technical analysis data from IBAPI** to identify optimal trade entry points.
+
+### **Market Data Provided:**
+1. **Fundamental Analysis (Rogue Radar Report)**
+   - Storage levels and weekly changes
+   - Production and imports data
+   - Demand and export trends (LNG, Mexico, etc.)
+   - Weather impact and seasonal forecasts
+   - International price movements (JKM, TTF, etc.)
+   - Key price levels, resistance, and support
+
+2. **Technical Analysis (IBAPI Data)**
+   - Moving Averages (SMA, EMA) for trend confirmation
+   - RSI, MACD, and Stochastic Oscillators for momentum analysis
+   - Volume and Order Flow data for market strength
+   - Historical price action at key support/resistance levels
+   - Market correlation with broader indices (SPX, DXY)
+
+---
+
+### **🔍 Your Task:**
+1. **Analyze the Fundamental Data:**
+   - Identify whether current market conditions suggest **bullish, bearish, or neutral sentiment**.
+   - Assess if storage draw/build trends support price movement in **Natural Gas or Crude Oil**.
+   - Determine if weather forecasts, LNG exports, or geopolitical factors are influencing the markets.
+
+2. **Analyze the Technical Data:**
+   - Identify whether price is near a key **support or resistance level**.
+   - Evaluate momentum indicators (**RSI, MACD**) to confirm trend strength.
+   - Look at volume and order flow patterns from IBAPI to check for **institutional participation**.
+
+3. **Determine Optimal Entry Timing:**
+   - Based on the **EIA storage report (Natural Gas, Thursdays 10:30 AM ET)** or **EIA petroleum status report (Crude Oil, Wednesdays 10:30 AM ET)**, suggest whether an entry should be taken **before, at the release, or after confirmation of a move**.
+   - Identify specific price levels where a trade should be executed and stop-loss levels to minimize risk.
+
+4. **Generate an Actionable Trade Plan:**
+   - Define a **trade setup** based on technical confirmation and fundamental alignment.
+   - Specify **entry price, stop loss, and profit targets**.
+   - Mention **alternative scenarios** in case of unexpected market movement.
+
+### **📌 Example Response Format:**
+📊 Market Summary:
+
+Natural Gas Sentiment: Bullish/Bearish/Neutral
+Crude Oil Sentiment: Bullish/Bearish/Neutral
+📉 Technical Indicators:
+
+NG Key Resistance/Support Levels: $X.XX / $X.XX
+CL Key Resistance/Support Levels: $X.XX / $X.XX
+Momentum Indicators: RSI at XX, MACD cross at X.XX
+📅 Best Entry Timing:
+
+Natural Gas: Trade setup around EIA Storage Report release (Thursday 10:30 AM ET), enter long/short at $X.XX if XYZ conditions hold.
+Crude Oil: Entry around EIA Petroleum Report release (Wednesday 10:30 AM ET), take long/short at $X.XX with stop at $X.XX.
+🎯 Trade Plan:
+
+Entry: $X.XX
+Stop Loss: $X.XX
+Profit Target: $X.XX
+Risk-Reward Ratio: X:1
+📌 Alternative Scenario:
+
+If XYZ condition changes, wait for confirmation at X:XX AM ET before entering.
+Copy
+Edit
+How to Use This Prompt:
+Feed the latest Rogue Radar Report data into the prompt.
+Provide IBAPI Technical Indicators (e.g., SMA, RSI, MACD, volume levels).
+Run it through GPT-4.5-preview to generate an actionable trade plan.
+
+
+
+Based on your provided PDFs and the market data contained within them, here are additional, targeted GPT prompts specifically designed for institutional trading insights. These prompts are carefully structured to help identify good trade entries, analyze market dynamics, and capitalize on the detailed information from the Rogue Radar reports.
+
+Prompt 1: Crude Oil Price Momentum and Trade Entry
+*"Given the current crude oil market levels:
+
+WTI: $68.10 (Pivot: $68.48)
+Brent: $71.53 (Pivot: $68.48, Resistance: $71.41)
+Recent geopolitical developments: China stimulus, U.S. airstrikes in Yemen, and Ukraine ceasefire uncertainty.
+Provide a detailed analysis on whether WTI is more likely to break above the $71.41 resistance or fail support at $66.84. Recommend ideal entry points, stop-loss levels, and target profit areas for swing traders."*
+
+Prompt 2: Natural Gas Technical Analysis and Entry Strategy
+*"Analyze natural gas prices with the following key information:
+
+Current price: $4.20/MMBtu
+Pivot (critical bull/bear line): $4.174
+Resistance: $4.331, $4.394, $4.476
+Support: $4.122, $4.088, $4.022, $3.965
+Market context: High production at 105.7 Bcf/d, strong LNG exports (15.6 Bcf/d), warmer forecast weather.
+Discuss the likelihood of a sustained move above pivot $4.174 or potential downside retracement. Suggest precise trading entries, ideal stop-loss points, and exit targets for both bullish and bearish scenarios."*
+
+Prompt 3: Diesel Market Correction and Trade Recommendation
+*"Given the current diesel market conditions (NY Harbor ULSD):
+
+Current Pivot Level: $2.1518
+Resistance targets: $2.1759, $2.1951, $2.2108
+Fundamental oversold condition and supportive Chinese economic data.
+Assess the probability of a corrective bounce back towards $2.2108. Provide optimal entry points for long positions, recommended stop-loss, and profit-taking levels, factoring in current fundamentals and technical conditions."*
+
+Prompt 4: Supply-Demand Driven Natural Gas Entry Signals
+*"Evaluate the following supply-demand information for natural gas:
+
+Current Dry Gas Production: 105.5 Bcf/d (slightly decreased)
+LNG Exports: 15.8 Bcf/d
+Implied Storage target: 3,413 Bcf (current implied injection rate: 0.7 Bcf/d)
+Identify actionable trading signals based on shifts in production, exports, and implied storage balance. Suggest precise entries, profit targets, and risk management strategies for short-term and medium-term trades."*
+
+Prompt 5: Crude Oil Storage Levels and Market Reaction
+*"Using current crude oil inventory data:
+
+Crude Stocks: 415.6 MMB vs 5Y AVG: 437.2 MMB
+Gasoline Stocks: 231.4 MMB vs 5Y AVG: 237.0 MMB
+Distillate Stocks significantly lower than 5Y AVG.
+Analyze how these inventory levels might impact near-term price trends. Recommend actionable trade setups including entry points, clear stop-losses, and targeted profit levels, considering current market sentiment and historical inventory impacts."*
+
+Prompt 6: Seasonal and Technical Trade Setup for Crude Oil
+*"Given crude oil’s seasonal factors and technical setup:
+
+Recent WTI pivot: $68.48, resistance at $71.41
+Speculative hedge fund selloff
+Potential summer demand increase (global travel season)
+Construct a seasonal-based trade idea considering technical breakouts. Clearly detail entries, stops, profit targets, and strategic trade management to capitalize on summer seasonality and technical price action."*
+
+Prompt 7: Impact of Global Geopolitics on Crude Oil Trading
+"With recent geopolitical events including U.S. airstrikes in Yemen, Iran/Venezuela sanctions, and Ukraine ceasefire developments, provide a comprehensive risk assessment on crude oil futures. Highlight trade entry points to hedge geopolitical risk, recommended stop-loss placement, and profit-taking levels in both bullish and bearish geopolitical scenarios."
+
+Prompt 8: Comparative Energy Commodity Spread Trade
+*"Considering the current dynamics in energy markets:
+
+Natural Gas prices hovering around pivot $4.174
+Diesel (ULSD) significantly oversold at pivot $2.1518
+Crude Oil trading near key pivots at $68.48 (WTI) and $71.41 (Brent)
+Analyze opportunities for spread trading between these commodities. Outline a spread trade recommendation (e.g., Natural Gas vs. ULSD or Crude Oil vs. ULSD), including entry points, target spread levels, and appropriate risk mitigation techniques."*
+
+Prompt 9: Volatility-Based Trade Strategy (Natural Gas)
+*"Natural gas volatility is expected given:
+
+Strong LNG exports
+High production records
+Potential warmer weather forecasts limiting demand
+Recommend a volatility-based trading strategy using options on futures. Specify strike prices, optimal expirations, strategy type (e.g., straddle, strangle), implied volatility considerations, and ideal entry conditions."*
+
+Prompt 10: Inventory and Refining Demand Trade (Crude Oil)
+"Considering current refinery inputs (16.86 MMBOPD vs 5Y AVG 15.53), crude production (13.57 MMBOPD vs AVG 12.2), and upcoming refinery maintenance season, provide analysis and trade entries to capitalize on expected shifts in crude and refined product balances. Recommend clear price levels for entry, stops, and targets."
+
+These tailored prompts enable you to leverage the detailed insights provided in the Rogue Radar reports, effectively guiding precise, well-informed trade entries across multiple energy markets.
