@@ -1,0 +1,66 @@
+Below is a practical guide on converting the U.S. release times for the weekly Energy Information Administration (EIA) reports into New Zealand local time. This should help you plan when to deploy either the breakout strategy (on CL or NG futures) or the options strategies (straddles/strangles or credit spreads) around the EIA news.
+
+1. EIA Report Release Times (U.S. Eastern Time)
+EIA Petroleum Status Report: Wednesdays, 10:30 AM U.S. Eastern Time (ET).
+EIA Natural Gas Storage Report: Thursdays, 10:30 AM U.S. Eastern Time (ET).
+(Occasionally, the Natural Gas report is at 10:00 AM ET; check the official schedule.)
+However, the exact conversion to NZ time depends on Daylight Savings shifts both in the U.S. and in New Zealand.
+
+2. Conversion to New Zealand Time
+Case A: U.S. in Standard Time (roughly November to mid-March)
+Eastern Standard Time (EST) is UTC-5.
+New Zealand Daylight Time (NZDT) is typically UTC+13 during the NZ summer.
+EIA release at 10:30 AM EST 
+→
+→ 4:30 AM NZDT, the next day.
+Hence, Wednesday 10:30 AM EST in the U.S. corresponds to Thursday 4:30 AM NZDT in New Zealand.
+
+Case B: U.S. in Daylight Time (roughly mid-March to early November)
+Eastern Daylight Time (EDT) is UTC-4.
+New Zealand Standard Time (NZST) is UTC+12 (roughly April to late September).
+EIA release at 10:30 AM EDT 
+→
+→ 2:30 AM NZST, the next day.
+Hence, Wednesday 10:30 AM EDT in the U.S. corresponds to Thursday 2:30 AM NZST in New Zealand.
+
+Important: There can be brief transition periods (a week or two) when the clocks change on different dates in the U.S. vs. NZ, shifting the local time by another hour. Always confirm with a reliable world clock or IB’s calendar in TWS for the exact local-time offset if you’re near the DST change dates.
+
+3. “Best” Times to Trade Around the EIA Release (NZ Time)
+Futures Breakout Strategy (CL or NG)
+If you want to trade the breakout (prior day high/low) around the EIA report:
+You’d typically be watching the market just before and right after the report.
+That means around 2:00–3:00 AM NZST (U.S. summer) or 4:00–5:00 AM NZDT (U.S. winter).
+Options Straddle/Strangle or Credit Spreads
+For volatility strategies (long straddles/strangles) or premium-selling (credit spreads, iron condors):
+Entering 10–30 minutes before the report lets you capture the expected volatility move (for long premium) or sell inflated implied volatility (for short premium).
+In NZ time, this could be as early as 2:00–2:20 AM NZST or 4:00–4:20 AM NZDT to set orders before the 2:30 AM / 4:30 AM release.
+4. Practical Tips for Trading in NZ Time
+Automate if Possible
+
+Given these times are early morning in NZ, consider using automated trades or alerts to avoid waking up at 2:00–4:00 AM weekly.
+Tools:
+APScheduler (Python) or a cron job to run your IBAPI script at a preset time.
+Bracket orders or OCO (One-Cancels-Other) orders in IB Trader Workstation (TWS) to handle entry and stop/target automatically.
+Check DST Calendars
+
+Double-check the current offset:
+U.S. DST typically starts the second Sunday in March and ends the first Sunday in November.
+NZ DST typically starts late September and ends early April.
+The release time in NZ could shift by an hour or two during those transition weeks.
+Prep Your Levels Before Bed
+
+If using a breakout approach, mark the prior day’s high/low and set up your bracket or conditional orders before going to sleep.
+For options: Know which strikes you plan to trade (ATM for a straddle, OTM for iron condor, etc.) and have orders ready to transmit automatically.
+Monitor Real-Time if Possible
+
+If you do stay awake, be ready to see the initial spike around 2:30/4:30 AM. The biggest moves often happen within the first 15-30 minutes of the release.
+5. At-a-Glance Reference
+U.S. Time	NZ Time	Notes
+10:30 AM EST (Wed)	4:30 AM NZDT (Thu)	Approx. Nov–Mar (U.S. winter / NZ summer).
+10:30 AM EDT (Wed)	2:30 AM NZST (Thu)	Approx. Mar–Nov (U.S. summer / NZ winter).
+Natural Gas (Thursday 10:30 AM ET) in the U.S. => Friday early-morning in NZ, with the same time offset logic.
+Final Takeaway
+Best Times (NZ): If you’re manually trading around EIA, you’ll typically need to be active very early Thursday (for Crude) or early Friday (for Nat Gas).
+Automation is strongly recommended unless you’re happy being up at 2–4 AM weekly.
+Always verify the current ET-to-NZ offset because Daylight Savings changes can shift these times by 1 hour in either direction.
+By aligning your trading times with the exact release windows in New Zealand local time, you can execute your breakout or options strategies as intended—capitalizing on the consistent volatility these EIA reports generate.
