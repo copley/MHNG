@@ -1,0 +1,357 @@
+Below are several ways you can interpret the crude‐oil supply/demand breakdown and inventories data to inform your trading of CME WTI futures (CL) or micro WTI futures (MCL):
+
+1. Compare Current Levels to 5‐Year Averages
+The data show where current production, refinery inputs, and various product stockpiles stand relative to their 5‐year averages. For instance:
+
+Crude Production at 13.57 MMBOPD vs. 12.2 (5Y Avg)
+Higher‐than‐normal production can be bearish if demand does not absorb the extra barrels.
+Refinery Inputs at 16.86 MMBOPD vs. 15.53 (5Y Avg)
+Refineries are running above normal rates—which can be bullish for crude demand if sustained.
+Likewise, examine whether crude inventories and product stocks (gasoline, distillates, jet fuel, etc.) are above or below historical benchmarks:
+
+Crude Stocks: 415.6 MMB vs. a 5Y Avg of 437.2 → currently below average, which can be supportive of higher crude prices.
+Gasoline Stocks: 231.4 MMB vs. 237.0 → slightly below average, also somewhat bullish.
+Distillate Stocks: 122.9 MMB vs. 133.8 → distinctly below average, often a sign of tight supply (and potentially supportive for the distillate crack spread).
+How to Use It
+If you see a pattern of below‐average inventories across multiple product categories, it suggests a generally tighter overall market—tilting price bias to the upside.
+Conversely, above‐average production or large product builds could cap or weigh on crude prices unless demand is robust.
+2. Track Supply‐Demand Shifts Over Time
+You also have charts showing:
+
+Total US CL Supply vs. Refinery Inputs
+Total US Commercial Crude Stocks
+Crude + Products Total Stocks
+Look for trends rather than just a single data point:
+
+Are weekly inputs (demand by refiners) trending up or down?
+
+Rising refinery runs typically signal strong demand for crude feedstock, potentially drawing inventories lower—bullish if accompanied by stable or lower production.
+Is crude production accelerating or plateauing?
+
+A slowdown in production growth while demand stays high can lead to bigger inventory draws—supporting prices.
+Rapid production growth can outpace demand and lead to builds—bearish (unless offset by strong exports).
+Inventory Trajectory
+
+If crude + product stocks are drawing faster than usual, it often underpins higher prices.
+If stock builds outpace the historical norm, it can pressure prices lower.
+3. Recognize Seasonal and Product Nuances
+Gasoline demand peaks in summer driving season; distillates (diesel/heating oil) can spike in colder months. If these data are for December, note that below‐average distillate stocks might become especially relevant for winter heating demand.
+Propane or Jet Fuel surpluses/deficits can also skew cracks, but usually the biggest drivers for WTI itself are broader gasoline/distillate trends and total crude stocks.
+4. Integrate Fundamentals With the Futures Curve
+Flat Price (CL)
+Use the fundamental data to judge overall bullish/bearish sentiment. If you see tighter‐than‐average crude stocks plus strong refinery runs, you might lean bullish.
+Calendar Spreads
+If near‐term data show unexpectedly large draws, the front‐month (prompt) contract might move into backwardation relative to later months. Look for these shifts if you trade intermonth spreads.
+Crack Spreads
+If distillate and gasoline inventories are below average, refiners may enjoy strong margins. A bullish distillate crack spread can also indirectly support crude prices.
+5. Confirm With Real‐Time Drivers
+Macroeconomics & Demand: Recession fears or strong GDP growth can swing demand.
+Exports: Rising exports (to, say, Europe or Asia) can drain US inventories, supporting WTI.
+Geopolitical Events: OPEC+ production cuts or supply disruptions can trump local fundamentals.
+6. Practical Trading Tips
+Watch Weekly EIA Reports
+Compare each new storage or production figure to the 5‐year average to see if the bullish/bearish gap is widening or narrowing.
+Set Price Alerts
+If inventories break significantly below historical lows, or if production unexpectedly dips, that can signal an upcoming price move.
+Manage Risk
+Even strong fundamentals can reverse quickly if macro factors (like a sudden drop in demand) shift. Use stops and position sizing to protect against volatility.
+In Summary
+This supply/demand breakdown gives you a snapshot of US crude fundamentals relative to historical norms. By watching how production, refinery runs, and inventories evolve—and comparing them to seasonal patterns—you can form a directional bias for CL and MCL. Combine these insights with real‐time news, macro data, and technical analysis to refine your timing and risk management, ultimately making more informed trades in the crude‐oil futures market
+
+Here are some ways to leverage the inventory and stocks charts for CL (standard WTI) and MCL (micro WTI) futures on the CME:
+
+1. Compare Crude & Product Inventories to 5‐Year Norms
+Each chart shows current inventory levels vs. the 5‐year min, max, and average. Look at whether inventories are above or below their typical seasonal range:
+
+Crude Stocks
+
+If total US commercial crude inventories are trending near or below the 5‐year average (and especially below the 5‐year min), that implies tighter supply—often bullish for WTI prices.
+If inventories are well above average or near the 5‐year max, that indicates a more comfortable supply buffer—potentially bearish or at least limiting price rallies.
+Refined Products (Gasoline, Distillates, Jet Fuel)
+
+Below‐normal product inventories can indicate strong demand or constrained refinery output, both of which can lend support to crude.
+Over‐supplied product markets can weigh on refinery margins (the “crack spread”) and potentially reduce crude demand if refiners slow run rates.
+Trading Use
+Directional Bias: Tighter‐than‐usual crude + product stocks often set a bullish tone. Higher‐than‐normal stocks tend to pressure prices.
+Seasonal Awareness: Motor gasoline stocks, for example, typically bottom in late winter and rise into spring. Check how these moves compare to seasonal averages to see if a bullish/bearish divergence is developing.
+2. Track Weekly Changes & Trend Over Time
+The bars (or lines) indicating weekly change in each chart show how quickly inventories are building or drawing:
+
+Consecutive draws in crude or product inventories (especially if larger than average draws for that season) suggest demand outstripping supply, which can be bullish.
+Consecutive builds may point to oversupply or weaker demand—often bearish.
+Trading Use
+Early Warnings: If you notice a big weekly draw in both crude and product stocks, it might foreshadow a tightening market—potentially a near‐term price pop.
+Confirmation: Pair these observed weekly shifts with the EIA’s official reports to confirm momentum (builds vs. draws) or detect turning points in supply/demand.
+3. Watch Crude vs. Products for Refining Clues
+Sometimes crude and product inventories move in opposite directions:
+
+If crude stocks are building but gasoline/distillate are drawing, that may indicate brisk demand for products and a strong crack spread. Refiners may continue to buy crude—underpinning WTI.
+If crude stocks are drawing but product inventories are swelling, it can suggest refiners are operating heavily but end‐use demand might be lagging—possibly capping further crude price rallies.
+4. Combine with Seasonal & Macro Factors
+Refinery Maintenance: In spring or fall “turnaround” seasons, refinery inputs can drop, temporarily softening demand for crude. Watch if crude builds spike, which might pressure CL prices.
+Economic Indicators: Demand for fuels (gasoline, diesel, jet fuel) is closely tied to economic activity. A strong economy may drain product stocks faster, lifting crude prices.
+Geopolitics & OPEC+ Actions: Even if US inventories appear comfortable, a sudden OPEC+ production cut or global supply disruption can outweigh local stock data and push prices higher.
+5. Practical Trading Approaches
+Flat Price Trades (Outright Long or Short)
+
+If inventories consistently run below 5‐year averages while weekly changes show persistent draws, you might lean bullish. Conversely, persistent above‐average stocks plus big builds can justify a short bias.
+Calendar Spreads
+
+Tight near‐term supplies (big draws now) can push front‐month contracts higher relative to later months (backwardation). An oversupplied near‐term market often leads to contango.
+Monitor these charts to see if supply tightness is short‐lived or structural.
+Refinery/Crack Spread Plays
+
+If product inventories are significantly below average, refiners may maintain high run rates—supporting crude demand. Conversely, if products are overstocked, refiners might reduce throughput, weakening near‐term crude demand.
+6. Confirm With Other Indicators
+Price Action & Technicals: Candlestick charts, moving averages, or momentum indicators can help time entries/exits around inventory data releases (e.g., EIA report days).
+Fundamental Announcements: Keep an eye on OPEC news, U.S. rig counts, or major economic releases that might overshadow purely inventory‐based signals.
+Bottom Line
+These charts show you how tight or loose the U.S. crude and product markets are relative to historical norms—and how supply/demand is evolving week by week. By monitoring inventory levels vs. the 5‐year range, observing the pace of weekly changes, and spotting divergences between crude and product stocks, you gain valuable clues about near‐term price direction for CL or MCL futures. Combine this inventory insight with broader market factors (e.g., economic data, OPEC decisions, seasonal trends) for a more comprehensive and confident trading strategy.
+
+
+Here’s how you can use the WTI Annual Strip Price (left chart) alongside the Moving‐Averages chart (right) to shape trading strategies in CME WTI futures (CL) and Micro WTI (MCL):
+
+1. Annual Strip Price: Gauging the Forward Curve
+What It Shows
+
+Each bar represents the average of monthly WTI futures for a given calendar year.
+Higher pricing in the nearer years (e.g., 2025) versus later years (e.g., 2029–30) suggests a backwardated forward curve—indicative of tighter supply/demand expectations near‐term or a risk premium in the nearer months.
+How to Use It
+
+Long‐Term Outlook & Hedging
+
+Producers might lock in favorable prices (hedge) in the higher‐priced forward contracts if they expect future production.
+If you believe the market is overly optimistic (or pessimistic) about future fundamentals, you might take a position in those farther‐dated strips.
+Calendar Spreads
+
+A noticeable gap between 2025 prices (e.g., $65.65) and the lower 2027–30 prices suggests possible opportunities for calendar‐spread trades (buy near‐dated futures and sell far‐dated or vice versa), especially if you think the shape of the curve will flatten or steepen.
+Compare With Fundamentals
+
+If you expect growing global crude demand or potential supply constraints, you might see the out‐years as underpriced. Conversely, if you think new production or OPEC policy will keep supply abundant, the near‐term premium may fade.
+2. Moving Averages: Short‐Term & Intermediate Trend Signals
+What It Shows
+
+Multiple MAs (e.g., 9‐day, 20‐day, 50‐day) plus the last price of the front‐month WTI contract.
+How to Use It
+
+Trend Confirmation
+
+Price trading above longer‐term MAs (50‐day) often indicates an uptrend. Below suggests a downtrend.
+Look for crossovers: if a short‐term MA (9‐day) crosses below a medium‐term MA (20‐ or 50‐day), it often signals bearish momentum building (and vice versa for bullish crossovers).
+Support & Resistance
+
+MAs can serve as dynamic support/resistance. For example, watch how price behaves around the 50‐day MA—if it repeatedly bounces there, the MA is acting as support.
+Pullback/Breakout Timing
+
+In a downtrend, a rally up to the 20‐ or 50‐day MA that fails can offer a short opportunity.
+In an uptrend, corrections to a rising MA can be a chance to go long.
+3. Marrying the Two Views: Strip vs. Spot/Short‐Term
+Short‐Term Price Action vs. Long‐Term Bias
+
+The strip chart helps you see how the market values WTI out into future years, while the MAs reveal near‐term momentum in the spot/front month.
+If near‐term MAs suggest a downward trend (bearish in the short run) but the forward strip remains high (the market expects stronger prices down the road), you might sell short‐term rallies while maintaining a longer‐term bullish outlook—or look for calendar‐spread opportunities.
+Seasonality & Upcoming Events
+
+Seasonal factors (e.g., driving season, winter heating demand) can affect short‐term moving averages. Meanwhile, the strip might reflect bigger macro stories like OPEC policy or global demand growth.
+Keep an eye on major triggers (OPEC meetings, macro data) that can shift the strip structure or abruptly change spot‐price momentum.
+Risk Management & Position Sizing
+
+Even if the annual strip looks bullish, near‐term technical weakness (moving averages trending down) may cause large drawdowns on a long position. You can use the MAs to scale in or out, or to refine your stop‐loss placements.
+In Practice
+If MAs are turning bullish and you see the front‐month price is lower than the next year’s strip, that contango could mean the market expects a near‐term glut but stronger demand later. You might trade a short‐term bounce or a calendar spread (buy near‐term, sell the higher‐priced out‐year) if you think the spread will narrow.
+If MAs are turning bearish and the strip also slopes down (backwardation), it might reinforce a near‐term short trade. Just remember that an unplanned supply outage or geopolitical event could suddenly tighten the market—so stay aware of fundamentals.
+Bottom Line
+
+The Annual Strip reveals market expectations (and potential mispricing) over the longer horizon.
+The Moving Averages show near‐term technical momentum, helping you decide when to enter or exit.
+Combine both views—and layer in fundamentals like EIA data or OPEC announcements—to make more confident, well‐timed trades in CL and MCL futures.
+
+Below is an overview of how each technical tool (Bollinger Bands, Pivot Levels, MACD, RSI) can be interpreted in the context of WTI crude (CL) and Micro WTI (MCL) futures, along with ideas for combining these signals into a coherent trading strategy.
+
+1. WTI & Bollinger Bands
+What You See
+
+Upper Band (blue) and Lower Band (orange): Typically set at ±2 standard deviations from a moving average (the white line is often the 20‐day MA in this example).
+Last Price (yellow line) is also plotted, giving you a sense of where price sits relative to the bands.
+How to Use It
+
+Volatility Gauge
+When the bands widen, volatility is rising. If they narrow (“squeeze”), volatility is contracting—often a precursor to a larger directional move.
+Overbought/Oversold Possibilities
+Price near or above the upper band can be considered “overbought” in a sideways market—some traders look to fade that move.
+Price near or below the lower band can be “oversold.”
+Trend Continuation
+In a strong uptrend, price may “walk” the upper band—don’t automatically short just because price touches the top band. Similarly for a downtrend near the lower band.
+2. WTI Pivot Levels
+What You See
+
+A Pivot (P) price derived from the previous session’s high, low, and close.
+Resistance levels R1, R2 (sometimes R3).
+Support levels S1, S2 (sometimes S3).
+How to Use It
+
+Intraday & Short‐Term Targets
+If WTI is trading above the pivot (67.083), many traders consider the day’s bias bullish, with R1 (67.577) or R2 (67.973) as upside objectives.
+Trading below the pivot can shift the bias bearish, with S1 (66.687) or S2 (66.193) as next downside targets.
+Support & Resistance
+R1, R2 often act as resistance zones where price might stall or reverse. S1, S2 serve as support zones.
+Breaks above R2 or below S2 can indicate strong momentum.
+3. MACD (Buy -> Blue Crosses Above Orange | Sell -> Blue Drops Below Orange)
+What You See
+
+The MACD Line (blue) vs. the Signal Line (orange).
+A bullish crossover (blue rises above orange) is typically a “buy” signal; a bearish crossover (blue below orange) is often a “sell.”
+How to Use It
+
+Momentum Shifts
+Use crossovers to identify changes in trend momentum.
+A rising MACD above zero often confirms a bullish trend; a negative MACD can confirm a bearish phase.
+Histogram (If Available)
+The histogram (difference between the MACD and Signal lines) shows how quickly momentum is shifting. A rising histogram can reinforce a bullish crossover.
+4. RSI (Above Orange = Overbought; Below Blue = Oversold)
+What You See
+
+RSI line (white) oscillating between 0 and 100.
+Two reference lines for “overbought” (orange) and “oversold” (blue).
+How to Use It
+
+Overbought/Oversold
+If RSI crosses above ~70 or 80 (orange line), the market could be overbought—some traders look for a possible reversal or at least a pullback.
+If RSI goes below ~30 or 20 (blue line), the market may be oversold—some look for a rebound or a pause in a downtrend.
+Confirming Trends vs. Reversals
+In a strong uptrend, RSI can stay overbought longer than expected; in a downtrend, it can remain oversold.
+5. Putting It All Together
+Combine Pivot Levels & Bollinger Bands
+
+If price approaches R2 and is simultaneously near the upper Bollinger Band, that confluence can strengthen the case for short‐term resistance (possible pullback zone).
+If price tests S1 or S2 and also touches the lower Bollinger Band in a non‐trending market, it might be a potential bounce area.
+Use MACD & RSI for Entry/Exit Timing
+
+Bullish Setup: If the MACD has just crossed bullish (blue above orange) and RSI is recovering from oversold territory, you’ve got momentum confirmation plus a mean‐reversion edge.
+Bearish Setup: If MACD flips bearish (blue below orange) and RSI is dropping from overbought, it’s often a signal to consider a short.
+Intraday vs. Swing Trading
+
+Pivot Points are often used for short‐term (intraday) trades.
+Bollinger Bands, MACD, RSI can be used for multi‐day or even multi‐week signals if you’re looking at daily charts.
+Risk Management
+
+Place stops slightly beyond pivot levels or the outer Bollinger Band, as those often act as price inflection zones.
+Watch for “false signals” if fundamentals (e.g., OPEC news, inventory data) conflict with your technical read.
+Example Scenario
+Price rallies near R1 and the upper Bollinger Band.
+RSI is above the orange line (overbought).
+MACD crosses from above to below signal line (bearish crossover).
+This confluence could indicate a short‐term pullback is more likely. A trader might go short with a stop above R2, aiming for a retest of Pivot or S1.
+Bottom Line
+These charts offer a technical roadmap:
+
+Bollinger Bands for volatility and potential extremes.
+Pivot Points for key support/resistance levels intraday or short term.
+MACD to gauge momentum shifts.
+RSI to spot overbought/oversold conditions.
+By combining them—and confirming with fundamental factors like inventories and OPEC announcements—you can make more informed decisions on WTI (CL) and Micro WTI (MCL) futures trades.
+
+#########
+Products
+#########
+
+
+Below are several ways diesel price data can help inform your WTI (CL) and Micro WTI (MCL) futures trading decisions:
+
+1. Diesel as a Demand Indicator for Crude
+Tight Diesel Supply → Bullish for Crude
+If diesel prices (No. 2 Diesel) are consistently elevated—especially relative to their historical range (the 5‐year min–max)—it usually signals strong distillate demand or limited supply. Refiners, seeing higher diesel margins (the “crack spread”), may run crude refineries at higher rates to produce more diesel. That extra crude demand can be supportive for WTI prices.
+
+Weak Diesel Prices → Softer Crude Demand
+Conversely, if diesel prices trend toward the lower end of the historical range, it often implies weaker distillate demand or plentiful supply. Refiners may reduce runs or favor producing other products, potentially easing near‐term crude demand and exerting downward pressure on WTI.
+
+2. Regional Pricing Differences and Refinery Economics
+The map shows diesel prices across different US regions (e.g., West Coast, Gulf Coast, Midwest). Large price discrepancies may reflect regional supply/demand imbalances or transport constraints. For instance:
+
+High West Coast diesel vs. relatively cheap Gulf Coast diesel often points to tight supply (due to unique regional specs, fewer refineries, or pipeline limitations).
+If certain regions are experiencing historically higher diesel prices or shortages, refiners may try to increase throughput to supply that region, thus drawing more crude.
+Trading Implication
+A big premium in one region could lead to stronger crack spreads for refineries supplying that region, indirectly lifting overall crude demand if refineries see profitable opportunities to ship diesel from other areas.
+
+3. Seasonality and Economic Activity
+Seasonal Distillate Demand: Distillates (diesel, heating oil) often see stronger demand in colder months (especially in the Northeast). Spikes in diesel price ahead of winter can foreshadow tightening supply—and potential bullishness for crude.
+Economic Indicator: Diesel usage is highly correlated with trucking, rail, and industrial activity. If diesel demand/prices are robust, it can be a signal of a healthy or expanding economy, typically bullish for broader energy demand.
+4. Watch the 5‐Year Range & Weekly Changes
+In the left chart, you can see whether the current diesel price is above or below the 5‐year average. The weekly change bars show how quickly prices are moving:
+
+Above Average + Rising: Suggests tightening supply or growing demand, supportive for crude.
+Below Average + Falling: Points to weaker distillate fundamentals, possibly weighing on WTI unless offset by other factors (like strong gasoline demand or OPEC cuts).
+5. Putting It All Together for CL & MCL
+Correlate Diesel Price Action with Crude Inventories
+
+If you see rising diesel prices alongside falling distillate inventories, it often indicates bullish distillate fundamentals. Refiners may ramp up runs, leading to increased crude draws. That can support a bullish bias in WTI futures.
+Monitor Crack Spreads
+
+Even if you don’t trade crack spreads directly, the difference between refined product prices (diesel, gasoline) and WTI is crucial to refiners’ profitability—and by extension, their appetite for crude feedstock. Strong diesel crack spreads often give an extra boost to WTI.
+Short‐Term vs. Longer‐Term View
+
+Diesel price spikes driven by transient supply disruptions (e.g., refinery outages, pipeline issues) can create short‐term bumps in crude demand.
+A structural change in diesel demand (e.g., an ongoing economic slump) can depress refined product prices and, in turn, crude over a more extended period.
+Regional Arbitrage & Transport
+
+Significant price differentials between regions can shift refinery economics and trade flows, which can show up as changes in weekly EIA data for crude, gasoline, and distillate stocks. Keep tabs on those moves to confirm or refute price trends.
+Bottom Line
+The diesel price and its regional differences serve as a key barometer for distillate demand and refining margins. By watching where current diesel prices stand relative to 5‐year norms, how quickly they’re changing, and which regions are paying premiums, you can gauge whether refiners are likely to increase or decrease crude runs. That insight, in turn, can help shape bullish or bearish biases for CL or MCL futures on the CME—especially when combined with other data (crude inventories, macro indicators, OPEC news).
+
+
+Below is a practical overview of how gasoline price and inventory data (along with distillate stocks) can guide your WTI (CL) or Micro WTI (MCL) futures trading decisions:
+
+1. Gasoline Demand as a Key Crude Driver
+Higher Gasoline Demand → Bullish for WTI
+When gasoline prices and/or consumption are strong—particularly in the summer driving season—refiners tend to increase runs to meet demand. This boosts crude‐oil feedstock demand and often supports WTI prices.
+Weaker Gasoline Demand → Bearish (or Less Supportive) for WTI
+If gasoline prices fall toward the lower end of the 5‐year range (or if inventories build significantly), refiners may reduce runs or switch yields, which can soften crude demand.
+How to Use It:
+
+Look at the “US Regular $/Gallon” chart vs. its 5‐year average: if it’s notably high and still climbing, you can infer strong end‐user demand. That can be a tailwind for crude.
+Check gasoline stocks relative to their 5‐year norms. Below‐average stocks and consecutive weekly draws often point to tighter supply—bullish for crude feedstock demand.
+2. Regional Pricing Differences and Refinery Economics
+The map shows retail gasoline prices in various US regions (e.g., West Coast at $4.15 vs. Gulf Coast at $2.53). Large price spreads between regions can indicate:
+
+Local Supply Constraints: High prices in one region (e.g., California) suggest possible refining or logistical bottlenecks there, encouraging refiners in other regions to supply that market if margins are attractive.
+Transportation/Pipeline Flow Shifts: If one region chronically faces higher prices, you may see persistent inflows of products from elsewhere, which affects overall refining runs.
+Trading Takeaway:
+Strong regional premiums can drive up overall gasoline production, thus elevating crude demand. Conversely, widespread low prices indicate comfortable supply or sluggish demand.
+
+3. Distillate Stocks’ Influence
+While gasoline is a huge component of refined output, distillates (diesel, heating oil) share capacity at refineries:
+
+Distillate Stocks vs. 5‐Year Average
+If distillate inventories are tight (below average), refiners might shift yields to produce more diesel, potentially impacting gasoline output and altering overall crude runs.
+If distillate stocks are high, refiners may focus on gasoline yields if gasoline margins look better.
+Trading Takeaway:
+Refiners optimize crude runs based on which product slate is most profitable. Weak distillate markets but strong gasoline markets can still keep crude runs elevated—overall supportive of WTI.
+
+4. Seasonal Context Matters
+Summer Driving Season (Apr–Sep)
+Gasoline demand typically peaks, so watch for draws in gasoline stocks and rising prices. If you see a significant drawdown below 5‐year averages, that’s often bullish for crude.
+Shoulder Seasons/Winter
+Demand for gasoline can dip while distillate demand may rise (for heating). Combine the data on gasoline/diesel stock levels to see how well supply is balancing each product’s seasonal peaks.
+5. Combining with Broader Fundamentals & Technicals
+Watch EIA Weekly Changes
+If the EIA data show gasoline stocks drawing faster than the chart’s 5‐year average rate, it supports the bullish side for WTI, all else being equal.
+Overlay with Technical Charts
+Use the fundamentals (strong gasoline demand or high regional retail prices) to confirm or contradict signals from technical indicators (moving averages, RSI, MACD) on CL/MCL price charts.
+OPEC+ & Global Supply
+Even if US gasoline demand is robust, global crude supply increases (like an OPEC+ production boost) can offset the bullish impact. Keep an eye on macro supply factors.
+6. Example Strategy
+Bullish Setup:
+
+Gasoline prices are at/near seasonal highs relative to 5‐year averages, and weekly draws on both gasoline and distillate stocks are accelerating.
+The front‐month CL chart also shows a bullish technical trend.
+A trader might go long CL or MCL, expecting refiners to keep buying crude to meet strong product demand.
+Bearish Setup:
+
+Gasoline retail prices and refining margins are falling; gasoline stocks are building above 5‐year norms.
+Distillate inventories are also high, giving refiners little incentive to run harder.
+If technicals confirm a downward trend, a short position or put spread on CL/MCL could be considered.
+Final Thoughts
+Gasoline retail prices and stock levels offer insights into refiners’ profitability and demand for crude feedstock. By checking how current gasoline/distillate data stack up against 5‐year historical norms, monitoring weekly changes, and factoring in regional price differences, you can better anticipate refiners’ behavior—and thereby identify bullish or bearish pressures on WTI futures. Integrate these fundamentals with technical analysis and global macro news to form a well‐rounded trading view for CL and MCL.
+
+
+
