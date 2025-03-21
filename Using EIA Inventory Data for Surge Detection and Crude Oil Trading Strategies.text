@@ -1,0 +1,129 @@
+Below is an example workflow showing how you might fetch actual inventory data from the EIA Open Data API, combine it with forecast data (from a public economic calendar or any forecast source), and then compare the actual vs. forecast. Finally, we’ll note that NYMEX WTI Crude Oil (CL) futures are one of the most heavily affected markets by these weekly EIA inventory data releases.
+
+1. Market Heavily Affected
+NYMEX WTI Crude Oil (CL) Futures
+
+Every Wednesday at 10:30 a.m. ET (or Thursday if there’s a U.S. holiday), the EIA releases its Weekly Petroleum Status Report.
+A larger-than-expected inventory build can pressure prices downward, while a bigger-than-expected draw often pushes prices higher.
+Many short-term algorithms and discretionary traders watch this number closely for intraday trades.
+2. Data Sources
+EIA Open Data API for actual U.S. Crude Inventory changes.
+
+Official site: https://www.eia.gov/opendata/
+You’ll need a free API key from EIA.
+Note that EIA provides the actual weekly stock levels or changes, not forecasts.
+Public Econ Calendar / Forecast
+
+Example: Investing.com, TradingEconomics, ForexFactory, etc.
+These sites typically show a “consensus forecast” for the weekly crude inventory number.
+There’s no official “EIA forecast”—the “forecast” is compiled by news or data providers surveying analysts.
+Often you’d scrape or call a third-party API to get that “expected” number.
+3. Example Python Script
+Below is a simplified approach:
+
+We pull actual data from the EIA for a recent weekly period.
+We pull or hardcode the forecast (in a real solution, you’d scrape or call an API from a forecast provider).
+We compare the two.
+We print any difference (the “surprise”), which traders often use for building a “surge reaction” model in crude oil.
+Note: This script focuses on the mechanics of fetching EIA actual data. For the forecast piece, we just show a placeholder function that returns a dummy forecast. In a production environment, you’d either scrape a site like Investing.com or call an aggregator’s API.
+
+python
+Copy
+Edit
+#!/usr/bin/env python3
+
+import requests
+import datetime
+
+# ----------------------------------------------------
+# CONFIG
+# ----------------------------------------------------
+EIA_API_KEY = "YOUR_EIA_API_KEY"  # sign up at https://www.eia.gov/opendata/
+# Weekly U.S. Crude Oil Ending Stocks, or you can pick a different series ID
+CRUDE_STOCK_SERIES_ID = "PET.WCESTP31.W"  
+
+# Example "placeholder" forecast retrieval:
+def get_forecast_value(report_date):
+    """
+    In a real solution, you'd scrape a public economic calendar or
+    call something like TradingEconomics/Investing.com API to get
+    the expected inventory build/draw for 'report_date'.
+    
+    For demonstration, we'll just return a dummy forecast.
+    """
+    # e.g. you might parse "report_date" (YYYY-MM-DD) to find that week's forecast
+    # or store a dictionary of {date: forecast_value}
+    return -1.2  # means forecast is a draw of 1.2 million barrels
+
+# ----------------------------------------------------
+# MAIN LOGIC
+# ----------------------------------------------------
+def main():
+    # 1) Fetch the actual EIA data
+    url = (
+        f"https://api.eia.gov/series/?api_key={EIA_API_KEY}"
+        f"&series_id={CRUDE_STOCK_SERIES_ID}"
+    )
+    resp = requests.get(url).json()
+
+    if "series" not in resp:
+        print("No data returned from EIA. Check your series ID or API key.")
+        return
+    
+    data_points = resp["series"][0]["data"]  
+    # Typically a list of [week_ending, value], e.g. [["2023-03-10", 4321.0], ...]
+    # "value" might be absolute stock levels or weekly changes—depends on series ID
+
+    # 2) Extract the most recent week
+    # The first element is usually the most recent
+    recent_date_str, recent_value = data_points[0]
+
+    # EIA dates are typically YYYY-MM-DD
+    # 'recent_value' might be total stocks in thousands of barrels or a weekly change
+    # check the series ID definition to confirm what "value" means
+
+    # 3) Get the forecast (placeholder)
+    forecast = get_forecast_value(recent_date_str)
+
+    # 4) Compute difference
+    # If 'recent_value' is absolute stock, you need to interpret difference from last week or check yoy data, etc.
+    # If it’s a weekly change series, you can directly compare to your forecast
+    actual = float(recent_value)
+
+    surprise = actual - forecast  # e.g. if actual is -2.0 (2 million draw) vs forecast -1.2 => surprise = -0.8
+
+    print(f"Weekly Data for {recent_date_str}:")
+    print(f"  Actual: {actual} million barrels (change)")
+    print(f"  Forecast: {forecast} million barrels (change)")
+    print(f"  Surprise: {surprise} million barrels")
+
+    # You might then use 'surprise' to inform a "surge threshold" approach
+    # e.g. if |surprise| > 1.0 => expect bigger CL move
+
+if __name__ == "__main__":
+    main()
+Explanation
+CRUDE_STOCK_SERIES_ID: We used PET.WCESTP31.W as an example weekly series from the EIA. Verify whether it represents weekly changes or an absolute stock level.
+
+Placeholder Forecast: In real usage, you might do:
+
+python
+Copy
+Edit
+# Example pseudo-code for scraping a forecast from a site
+forecast_url = "https://www.investing.com/economic-calendar/api/some-endpoint"
+# parse the JSON/HTML to find the forecast for "Crude Oil Inventories"
+forecast = ...
+Surprise: Actual minus forecast is how many million barrels differ from what analysts expected. Large surprises typically lead to larger intraday price moves in CL.
+
+4. Why CL (NYMEX WTI) Is So Affected
+Crude Oil Inventories directly measure the balance of supply and demand in the U.S.
+A bigger-than-expected draw means less supply in storage → bullish signal for WTI → prices often surge.
+A larger-than-expected build indicates oversupply → bearish signal → prices can drop quickly.
+Intraday algorithms watch the release at 10:30 a.m. ET. If the “actual vs. forecast” difference is significant, you frequently see a short-term surge or dip in the CL futures market.
+Key Takeaways
+Crude Oil (CL) Futures on NYMEX is heavily influenced by the weekly EIA Petroleum Status Report.
+You can use the EIA Open Data API to pull the actual data.
+The forecast must come from a third-party source (economic calendar or data aggregator).
+Once you have both, comparing actual vs. forecast (the “surprise”) can be integrated into a “surge detection” or short-term trading strategy.
+Large negative surprises (unexpected big draw) or positive surprises (unexpected build) commonly trigger big intraday moves in CL futures.
