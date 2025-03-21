@@ -1,0 +1,183 @@
+Below is an overview of the key fundamental drivers behind NYMEX Crude Oil (CL) futures, along with free data/API sources you can tap into for market-moving fundamentals and how you can combine them with your own technical analysis in Python (and IB’s API) to make more informed trading decisions.
+
+1. Fundamental Drivers of CL (Crude Oil) Futures
+Global Supply & Demand
+
+Production Volumes: OPEC+ decisions, U.S. shale output, Russia’s exports, etc.
+Global Economic Growth: If economic indicators point to robust growth, oil demand tends to rise; in recessions or slowdowns, demand softens.
+Inventory Levels
+
+U.S. Crude Oil Inventories: The EIA’s weekly Petroleum Status Report (published Wednesday mornings) often causes significant volatility if the actual build/draw differs from forecasts.
+Global Inventories: IEA reports, plus data from other major consuming countries.
+Geopolitical & Supply Disruptions
+
+Wars, sanctions, or political unrest in key producing regions (e.g., Middle East, Venezuela, Russia) can remove supply from the market and push prices higher.
+Conversely, peace deals or restored production can flood the market.
+Currency Fluctuations (U.S. Dollar)
+
+Since oil is priced in dollars, a strong dollar can pressure crude prices (making it more expensive for non-U.S. buyers), while a weaker dollar can support higher oil prices.
+Seasonality & Refinery Turnarounds
+
+Seasonal demand for heating oil (winter) or gasoline (summer driving season) can influence crack spreads and overall crude demand.
+Refinery maintenance schedules can temporarily reduce crude demand.
+Macro Data & Sentiment
+
+GDP growth, manufacturing data, consumer confidence, etc. all feed into overall demand expectations.
+Investor sentiment (risk-on vs. risk-off) also influences speculative positions in crude futures.
+2. Free APIs to Track Actual vs. Expected Fundamentals
+Below are the most commonly used free (or “freemium”) data sources you can query via API. These give you the underlying supply/demand data that analysts watch—letting you see how actual data prints compare to consensus forecasts.
+
+EIA (U.S. Energy Information Administration) Open Data
+
+Website: https://www.eia.gov/opendata/
+Why It Matters:
+Weekly U.S. crude inventory levels, production, and refinery utilization.
+Demand estimates for refined products like gasoline and distillates.
+How to Access:
+Register for a free API key.
+Search for relevant data series in EIA’s API browser.
+Key Reports:
+Weekly Petroleum Status Report (Wednesdays): Actual crude inventory changes, which can differ from forecasts (published by various news agencies).
+OPEC / IEA Reports (Mostly PDFs, but Summaries Are Public)
+
+While they don’t have a well-developed free API, you can often parse monthly PDF/HTML reports.
+Look for OPEC’s Monthly Oil Market Report and IEA’s Oil Market Report.
+FRED (Federal Reserve Economic Data)
+
+Website: https://fred.stlouisfed.org/
+API: https://research.stlouisfed.org/docs/api/fred/
+Why It Matters:
+You can pull broad macroeconomic data (e.g., industrial production, GDP growth rates, inflation) which correlate with energy demand.
+Some crude oil-related series (like WTI spot prices, production data) are also available.
+Economic Calendar / Consensus Forecasts
+
+For the expected vs. actual piece, you’ll need consensus forecasts from financial news or from data providers (like Trading Economics or Investing.com).
+Trading Economics has a freemium API that might give you limited calls for consensus vs. actual macro data prints.
+Investing.com also has an economic calendar. Some of this can be scraped, though there’s no official free API.
+3. Combining Fundamentals with Technical Indicators in Python
+Python Libraries for Technical Analysis
+
+TA-Lib or pandas-ta: Libraries with prebuilt indicators (RSI, MACD, Bollinger Bands, etc.).
+Backtrader or zipline: Frameworks for backtesting technical/fundamental strategies.
+IB API (Interactive Brokers)
+
+IB’s Python API: Lets you pull real-time market data, historical data (depending on your subscription), and place trades programmatically.
+Combine your fundamental data (from EIA, FRED, etc.) with IB’s real-time price feed to run trade signals.
+Putting It All Together
+Step 1: Pull the latest EIA weekly inventory data via the EIA API. Compare actual inventory draw/build to the “Street” consensus (which you might get from public news sources or an economic calendar).
+Step 2: Incorporate macro data from FRED (e.g., industrial production, GDP, etc.) to get a sense of demand trends.
+Step 3: Use Python + TA-Lib to compute technical indicators on CL price data (which you might source from IB).
+Step 4: Build a rules-based strategy that looks for divergences between fundamentals (e.g., bigger-than-expected inventory draw) and your technical indicators (e.g., RSI oversold).
+Step 5: If bullish fundamentals line up with bullish technical signals, place a buy order via the IB API. Conversely, if fundamentals are bearish and your technical signals confirm the downtrend, go short or step aside.
+4. Example Pseudocode / Workflow
+Below is a simplified flow you could adapt:
+
+python
+Copy
+import requests
+import pandas as pd
+import talib
+# from ibapi.client import EClient  # etc., set up your IB connection
+
+# 1. Pull Weekly Inventory Data from EIA
+EIA_API_KEY = "YOUR_EIA_KEY"
+inventory_series_id = "PET.WCESTP31.W"  # (example: weekly ending stocks, etc.)
+url = f"https://api.eia.gov/series/?api_key={EIA_API_KEY}&series_id={inventory_series_id}"
+response = requests.get(url).json()
+# parse JSON -> store in a dataframe
+
+# 2. Compare the latest data to expectations
+# -- you'd have to fetch or store 'expected' or 'forecast' from a news site or have them manually
+latest_actual = ...
+latest_expected = ...
+surprise = latest_actual - latest_expected
+
+# 3. Pull CL price data from IB or another feed
+# (pseudo-code, depends on your IB wrapper)
+# historical_prices = get_historical_prices_IB(contract="CL", duration="1 M", barSize="1 day")
+
+df = pd.DataFrame(historical_prices)
+df['RSI'] = talib.RSI(df['close'], timeperiod=14)
+df['SMA_50'] = talib.SMA(df['close'], timeperiod=50)
+
+# 4. Combine fundamental surprise & technical signals
+if surprise < 0 and df['RSI'].iloc[-1] < 30:  # bigger draw than expected + oversold
+    signal = "BUY"
+elif surprise > 0 and df['RSI'].iloc[-1] > 70: # bigger build than expected + overbought
+    signal = "SELL"
+else:
+    signal = "HOLD"
+
+# 5. Execute trades via IB
+# if signal == "BUY": place_order("BUY", quantity=1, contract="CL")
+# ...
+You’d flesh out the details for each data feed, the expected vs. actual logic, and how you want to weight fundamentals vs. technicals in your final trading decision.
+
+5. Key Points to Remember
+Free vs. Paid: Truly real-time and consensus forecast data (especially for oil inventory forecasts) often requires paid subscriptions (e.g., Platts, Argus, Refinitiv). However, for a “good enough” approach, you can use the free EIA data once it’s released and compare to publicly disseminated estimates.
+Timeliness: EIA data is weekly (not daily or intraday). Short-term moves can be driven by intraday news, tweets, OPEC headlines, etc.
+API Limitations:
+Some free API calls (like from Trading Economics) are rate-limited and might only give you partial data.
+You may need some manual integration of consensus forecasts.
+By combining fundamental data (especially inventory surprises) with technical signals, you can develop a more holistic approach to trading CL futures—even if your primary data sources are free APIs.
+
+Below is an overview of typical release times and intraday events that can move the Crude Oil (CL) futures market based on fundamental data. While crude can move on headlines at any time (especially unexpected geopolitical news), there are a few regular “scheduled” events and times that traders watch closely:
+
+1. Weekly EIA Petroleum Status Report
+Release Time: Wednesdays at 10:30 a.m. ET (unless delayed by U.S. holidays)
+What It Includes:
+U.S. crude oil inventory changes (builds/draws)
+Gasoline and distillate inventory changes
+Refinery utilization rates and total production estimates
+Impact:
+If the reported crude draw or build diverges significantly from analysts’ expectations, you’ll often see immediate volatility in CL futures around 10:30 a.m. – 10:45 a.m. ET.
+Large inventory surprises can set the tone for the rest of the trading session and sometimes carry over to the following days.
+2. API (American Petroleum Institute) Weekly Data
+Release Time: Generally Tuesdays at 4:30 p.m. ET (private subscription data; some media outlets may report highlights shortly after).
+What It Includes:
+A preview of weekly crude, gasoline, and distillate stock changes—similar to EIA data but collected independently.
+Impact:
+Because it comes out the evening before the EIA report, it often influences the overnight session and sets expectations for the official Wednesday numbers.
+Traders will sometimes position themselves in the overnight or pre-market based on whether API significantly differs from prior consensus.
+3. OPEC+ Meetings & Announcements
+Meeting Schedules: OPEC typically meets at least twice a year, with additional “extraordinary” meetings as needed. These can occur at various times (often mid-morning in Vienna, Austria, which translates to overnight or early morning in the U.S.).
+Announcements: Production quotas / supply cuts or increases.
+Impact:
+News/rumors can break any time, often overnight or early in the U.S. trading day.
+Watch: If an announcement is expected, CL futures may see big moves in the early morning (Eastern Time) as details leak or are officially released.
+4. Macroeconomic Data Releases (U.S. Time)
+Although not specifically oil inventory data, broad economic indicators can drive crude demand expectations—and thus intraday CL moves. Common U.S. data releases include:
+
+8:30 a.m. ET:
+CPI/PPI (inflation numbers)
+GDP (quarterly)
+Jobless Claims (weekly)
+9:45 – 10:00 a.m. ET:
+PMI/ISM manufacturing and services
+2:00 p.m. ET:
+FOMC rate decisions (on scheduled dates)
+Impact: Strong or weak economic data can quickly shift sentiment on energy demand. Volatility often spikes around these times, with crude trading reacting in tandem with equity and currency markets.
+
+5. End-of-Day Settlements & Electronic Sessions
+NYMEX Pit Session: Official “floor” session for CL historically ran from 9:00 a.m. to 2:30 p.m. ET, but electronic trading on CME’s Globex extends well beyond those hours.
+Settlement Window: The daily settlement price is determined by trading activity 2:28 p.m. – 2:30 p.m. ET on CME/NYMEX. Spikes in volume and volatility can occur if traders adjust positions ahead of settlement.
+Overnight Session: Starts around 6:00 p.m. ET (Sunday through Thursday) on Globex. While volume is often lower than daytime, events such as API releases (Tuesdays 4:30 p.m. ET) or surprise geopolitical headlines can cause outsized moves when liquidity is thinner.
+Putting It All Together: Timing Your Trades
+Tuesdays (After 4:30 p.m. ET): Watch how the API report influences evening/overnight CL trading.
+Wednesdays at 10:30 a.m. ET: High-impact window due to EIA weekly inventory numbers—often triggers immediate volatility.
+Early Morning (U.S. Time): Monitor for surprise OPEC news or macro data.
+Major U.S. Econ Releases (8:30 a.m., 10:00 a.m. ET, FOMC days at 2:00 p.m.): CL can react strongly if data shifts risk sentiment or growth forecasts.
+2:28–2:30 p.m. ET: Settlement period can see abrupt position-squaring or hedging flow.
+How to Use This With Your Analysis
+Fundamental APIs (EIA, FRED, scraping consensus forecasts) and your technical signals (RSI, MACD, etc.) can be run automatically at key intervals.
+For example:
+Tuesdays, 5:00 p.m. ET: Incorporate API data (if you can find a public summary) into your model.
+Wednesdays, 10:00 a.m. ET: Prepare a “forecast vs. actual” script. Then re-run at 10:35 a.m. after the EIA release to see how big the surprise is.
+IB API or other trading APIs: You might schedule Python scripts to pull the new fundamental data right after these releases and automate trades if your strategy triggers a signal.
+Key Takeaways
+Highest-impact event for weekly U.S. crude fundamentals is the EIA report at 10:30 a.m. ET on Wednesdays.
+API data (Tuesdays 4:30 p.m. ET) can prime market expectations heading into the official EIA numbers.
+OPEC announcements can hit overnight/early morning, so keep an eye on those if you hold positions 24/7.
+Major U.S. macro releases can cause intraday swings in crude demand sentiment, especially around 8:30 a.m. ET.
+Settlement (2:30 p.m. ET) can also see last-minute positioning moves.
+By integrating timing awareness (key release times), fundamental data (inventory changes, supply-demand announcements), and technical analysis (Python TA libraries, IB API for order execution), you can structure a more nuanced crude oil trading approach that takes advantage of known volatility windows.
